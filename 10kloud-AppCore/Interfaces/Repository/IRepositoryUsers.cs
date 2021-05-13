@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace _10kloud_AppCore.Interfaces.Repository
 {
     /// <summary>
-    /// it ereditates from IRpeositoryBase all CRUD methods
+    /// it inherits  from IRepositoryBase
     /// </summary>
     public interface IRepositoryUsers:IRepositoryBase<User, int>
     {
