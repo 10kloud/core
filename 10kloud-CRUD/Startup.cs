@@ -28,6 +28,8 @@ namespace _10kloud_CRUD
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            // here has been added all methods for the dependency injection
             services.AddSingleton<IRepositoryAlamrs, AlarmsRepository>();
             services.AddSingleton<IRepositoryUsers, UsersRepository>();
             services.AddSingleton<IServiceUsers, UsersService>();

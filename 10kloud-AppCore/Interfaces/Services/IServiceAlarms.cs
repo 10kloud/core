@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace _10kloud_AppCore.Interfaces.Services
 {
+    /// <summary>
+    /// it's the alarms service intarface for the CRUD Methods 
+    /// </summary>
     public interface IServiceAlarms
     {
         IEnumerable<Alarm> GetAlarms();

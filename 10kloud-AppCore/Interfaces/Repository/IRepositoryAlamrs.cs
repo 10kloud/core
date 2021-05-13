@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace _10kloud_AppCore.Interfaces.Repository
 {
+    /// <summary>
+    /// it ereditates from IRpeositoryBase all CRUD methods
+    /// </summary>
     public interface IRepositoryAlamrs:IRepositoryBase<Alarm, int>
     {
     }

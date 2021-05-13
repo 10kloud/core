@@ -17,4 +17,8 @@
     <ProjectReference Include="..\10kloud-infrastructure\10kloud-infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+  </ItemGroup>
+
 </Project>
