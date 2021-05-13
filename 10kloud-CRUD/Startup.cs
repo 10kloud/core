@@ -1,3 +1,7 @@
+using _10kloud_AppCore.Interfaces.Repository;
+using _10kloud_AppCore.Interfaces.Services;
+using _10kloud_AppCore.Services;
+using _10kloud_infrastructure.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +28,11 @@ namespace _10kloud_CRUD
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddSingleton<IRepositoryAlamrs, AlarmsRepository>();
+            services.AddSingleton<IRepositoryUsers, UsersRepository>();
+            services.AddSingleton<IServiceUsers, UsersService>();
+            services.AddSingleton<IServiceAlarms, AlarmsService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

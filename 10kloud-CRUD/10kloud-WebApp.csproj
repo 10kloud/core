@@ -1,8 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>_10kloud_CRUD</RootNamespace>
+    <UserSecretsId>c4aecf50-07da-4da5-9d23-08a77f7a8bae</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
+    <PackageReference Include="Npgsql" Version="5.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\10kloud-AppCore\10kloud-AppCore.csproj" />
+    <ProjectReference Include="..\10kloud-infrastructure\10kloud-infrastructure.csproj" />
+  </ItemGroup>
 
 </Project>

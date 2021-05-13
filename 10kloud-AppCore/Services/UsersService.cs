@@ -1,4 +1,5 @@
 ﻿using _10kloud_AppCore.Entities;
+using _10kloud_AppCore.Interfaces.Repository;
 using _10kloud_AppCore.Interfaces.Services;
 using System;
 using System.Collections.Generic;
@@ -10,29 +11,37 @@ namespace _10kloud_AppCore.Services
 {
     public class UsersService : IServiceUsers
     {
+
+        private readonly IRepositoryUsers _repositoryUsers;
+
+        public UsersService(IRepositoryUsers repositoryUsers)
+        {
+            _repositoryUsers = repositoryUsers;
+        }
+
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _repositoryUsers.Delete(id);
         }
 
         public User Get(int id)
         {
-            throw new NotImplementedException();
+            return _repositoryUsers.Get(id);
         }
 
         public IEnumerable<User> GetUsers()
         {
-            throw new NotImplementedException();
+            return _repositoryUsers.GetAll();
         }
 
         public void Insert(User item)
         {
-            throw new NotImplementedException();
+            _repositoryUsers.Insert(item);
         }
 
         public void Update(User item)
         {
-            throw new NotImplementedException();
+            _repositoryUsers.Update(item);
         }
     }
 }
