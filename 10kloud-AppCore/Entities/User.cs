@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace _10kloud_AppCore.Entities
 {
-    class User
+    public class User : Entity<int>
     {
+        public string Mail { get; set; }
+        public string Password { get; set; }
+        public int Permission { get; set; }
     }
 }
