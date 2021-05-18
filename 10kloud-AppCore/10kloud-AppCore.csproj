@@ -5,4 +5,8 @@
     <RootNamespace>_10kloud_AppCore</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.6" />
+  </ItemGroup>
+
 </Project>
