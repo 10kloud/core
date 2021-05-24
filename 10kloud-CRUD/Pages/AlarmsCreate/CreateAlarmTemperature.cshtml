@@ -1,0 +1,50 @@
+﻿@page
+@model _10kloud_CRUD.Pages.AlarmsCreate.CreateAlarmTemperatureModel
+@{
+    Layout = "_LayoutTemperatureCreate";
+
+}
+
+<!-- alarm form -->
+<form class="ml-4 mr-4">
+    <div class="form-group"><label for="exampleFormControlInput1">Nome Allarme</label><input class="form-control" id="exampleFormControlInput1" type="text"></div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1" asp-for="Input.Silos_Id"></label><select class="form-control" id="exampleFormControlSelect1">
+            <option>Silos1</option>
+            <option>Silos2</option>
+            <option>Silos3</option>
+            <option>Silos4</option>
+            <option>Silos5</option>
+            <option>Silos6</option>
+            <option>Silos7</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1" asp-for="Input.Threshold"></label><select class="form-control" id="exampleFormControlSelect1">
+            <option>0,1</option>
+            <option>0,2</option>
+            <option>0,3</option>
+            <option>0,4</option>
+            <option>0,5</option>
+            <option>0,6</option>
+            <option>0,7</option>
+            <option>0,8</option>
+            <option>0,9</option>
+            <option>1.0</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1" asp-for="Input.Serverity_Alarm"></label><select class="form-control" id="exampleFormControlSelect1">
+        
+        <option>Allarme</option>
+        <option>Errore</option>
+        <option>Pericolo</option>
+        </select>
+    </div>
+</form>
+<button type="submit" class="btn btn-primary ml-4" style="width: 80px;">Salva</button>
+<button type="button" class="btn btn-danger ml-4" style="width: 80px;">Annulla</button>
+
+
+
+<!-- End of Main Content -->

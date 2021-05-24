@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10kloud-WebApp", "10kloud-C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10kloud-AppCore", "10kloud-AppCore\10kloud-AppCore.csproj", "{753A0ED4-5AB1-4B16-9F83-A82098369D5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10kloud-infrastructure", "10kloud-infrastructure\10kloud-infrastructure.csproj", "{5E6F1CEF-6682-4C1C-AB3C-0FF8B7B8748C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10kloud-infrastructure", "10kloud-infrastructure\10kloud-infrastructure.csproj", "{5E6F1CEF-6682-4C1C-AB3C-0FF8B7B8748C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

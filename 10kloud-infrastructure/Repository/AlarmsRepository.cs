@@ -1,5 +1,6 @@
 ﻿using _10kloud_AppCore.Entities;
 using _10kloud_AppCore.Interfaces.Repository;
+using Dapper;
 using Dapper.Contrib.Extensions;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
@@ -43,7 +44,7 @@ namespace _10kloud_infrastructure.Repository
             using var connection = new NpgsqlConnection(_connectionString);
 
             connection.Delete<Alarm>(new Alarm { Id = id });
-            
+
         }
         /// <summary>
         /// call the database to get an Alarm throgh dapper contrib
@@ -70,9 +71,14 @@ namespace _10kloud_infrastructure.Repository
         /// <param name="entity"></param>
         public void Insert(Alarm entity)
         {
+            const string query = @"
+INSERT INTO alarm(name, description, silos_id, severity_alarm, threshold, alarming_parameter, user_id)
+VALUES (@Name, @Description, @Silos_id, @Severity_alarm, @Threshold, @Alarming_parameter, @User_id)"; // gli passo i parametri di query con gli stessi nomi della classe category perchè dupper me li trasforma in parametri di query
+
+
             using var connection = new NpgsqlConnection(_connectionString);
-             connection.Get<Alarm>(entity);
-            
+            connection.Execute(query, entity);
+
         }
         /// <summary>
         /// call the database to update an Alarm throgh dapper contrib
