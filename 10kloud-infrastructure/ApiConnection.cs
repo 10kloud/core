@@ -11,13 +11,13 @@ namespace _10kloud_infrastructure
 {
     class ApiConnection
     {
-        static async Task<string> GetApiData(string url)
+        static async Task<string> GetApiData(string ApiUrl)
         {
             // Call asynchronous network methods in a try/catch block to handle exceptions.
             try
             {
                 var client = new HttpClient();
-                HttpResponseMessage ApiResponse = await client.GetAsync(url);
+                HttpResponseMessage ApiResponse = await client.GetAsync(ApiUrl);
                 ApiResponse.EnsureSuccessStatusCode();
                 string responseBody = await ApiResponse.Content.ReadAsStringAsync();
                 return responseBody;
@@ -30,12 +30,13 @@ namespace _10kloud_infrastructure
                 return null;
             }
 
-            string datainizconv= "%272021-05-19%2008:55:02.509000000%27";
-            string datafineconv;
-            // formato data %272021-05-19%2008:55:02.509000000%27
-            string ApiUrl = await GetApiData("https://3jea5u3n72.execute-api.eu-west-1.amazonaws.com/silos?start=" + datainizconv + "&limit=60");
+            string datainizconv = "%272021-05-19%2008:55:02.509000000%27";
 
-            SilosDTOs response = JsonSerializer.Deserialize<SilosDTOs>(url);
+            // formato data %272021-05-19%2008:55:02.509000000%27
+            string ApiClient = await GetApiData("https://3jea5u3n72.execute-api.eu-west-1.amazonaws.com/silos?start=" + datainizconv + "&limit=60");
+
+            var response = JsonSerializer.Deserialize<Silos[]>(ApiClient);
+
 
 
         }
