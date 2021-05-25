@@ -12,6 +12,12 @@ namespace _10kloud_AppCore.Entities
     /// </summary>
     public class User : Entity<int>
     {
+
+        public string UserName { get; set; }
+
+        public string NormalizedUserName { get; set; }
+
+
         /// <summary>
         /// user Email
         /// </summary>
@@ -19,6 +25,24 @@ namespace _10kloud_AppCore.Entities
         /// <summary>
         /// User Password
         /// </summary>
+        /// 
+        public string NormalizedEmail { get; set; }
+
+        public bool EmailConfirmed { get; set; }
+
+        public string PasswordHash { get; set; }
+
+        public string SecurityStamp { get; set; }
+
+        public string ConcurrencyStamp { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public bool PhoneNumberConfirmed { get; set; }
+
+        public bool TwoFactorEnabled { get; set; }
+
+        public DateTime LockoutEnd { get; set; }
         public string Password { get; set; }
         /// <summary>
         /// User Permission

@@ -17,8 +17,9 @@ namespace _10kloud_AppCore.Interfaces.Services
         Alarm Get(int id);
         void Delete(int id);
 
+        IEnumerable<Alarm> GetByAlarmingParameter(string AlarmingParameter);
 
-        void Insert(Alarm item);
+        void Insert(Alarm item, string AlarmingParameter);
         void Update(Alarm item);
     }
 }

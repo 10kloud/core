@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core - tryFE\\10kloud-infrastructure\\10kloud-infrastructure.csproj": {}
+    "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core\\10kloud-infrastructure\\10kloud-infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core - tryFE\\10kloud-AppCore\\10kloud-AppCore.csproj": {
+    "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core\\10kloud-AppCore\\10kloud-AppCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core - tryFE\\10kloud-AppCore\\10kloud-AppCore.csproj",
+        "projectUniqueName": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core\\10kloud-AppCore\\10kloud-AppCore.csproj",
         "projectName": "10kloud-AppCore",
-        "projectPath": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core - tryFE\\10kloud-AppCore\\10kloud-AppCore.csproj",
+        "projectPath": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core\\10kloud-AppCore\\10kloud-AppCore.csproj",
         "packagesPath": "C:\\Users\\Bolzan Luca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core - tryFE\\10kloud-AppCore\\obj\\",
+        "outputPath": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core\\10kloud-AppCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -82,14 +82,14 @@
         }
       }
     },
-    "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core - tryFE\\10kloud-infrastructure\\10kloud-infrastructure.csproj": {
+    "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core\\10kloud-infrastructure\\10kloud-infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core - tryFE\\10kloud-infrastructure\\10kloud-infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core\\10kloud-infrastructure\\10kloud-infrastructure.csproj",
         "projectName": "10kloud-infrastructure",
-        "projectPath": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core - tryFE\\10kloud-infrastructure\\10kloud-infrastructure.csproj",
+        "projectPath": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core\\10kloud-infrastructure\\10kloud-infrastructure.csproj",
         "packagesPath": "C:\\Users\\Bolzan Luca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core - tryFE\\10kloud-infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core\\10kloud-infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -112,8 +112,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core - tryFE\\10kloud-AppCore\\10kloud-AppCore.csproj": {
-                "projectPath": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core - tryFE\\10kloud-AppCore\\10kloud-AppCore.csproj"
+              "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core\\10kloud-AppCore\\10kloud-AppCore.csproj": {
+                "projectPath": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core\\10kloud-AppCore\\10kloud-AppCore.csproj"
               }
             }
           }

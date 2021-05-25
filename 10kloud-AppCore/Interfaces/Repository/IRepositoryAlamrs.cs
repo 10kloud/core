@@ -12,5 +12,9 @@ namespace _10kloud_AppCore.Interfaces.Repository
     /// </summary>
     public interface IRepositoryAlamrs:IRepositoryBase<Alarm, int>
     {
+        public IEnumerable<Alarm> GetByAlarmingParameter(string AlarmingParameter);
+
+
+        void Insert(Alarm item, string AlarmingParameter);
     }
 }

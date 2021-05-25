@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\10kloud-AppCore\10kloud-AppCore.csproj" />
+    <ProjectReference Include="..\10kloud-infrastructure\10kloud-infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

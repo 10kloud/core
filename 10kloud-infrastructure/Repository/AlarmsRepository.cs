@@ -53,6 +53,7 @@ namespace _10kloud_infrastructure.Repository
         /// <returns></returns>
         public Alarm Get(int id)
         {
+
             using var connection = new NpgsqlConnection(_connectionString);
             return connection.Get<Alarm>(id);
         }
@@ -65,15 +66,45 @@ namespace _10kloud_infrastructure.Repository
             using var connection = new NpgsqlConnection(_connectionString);
             return connection.GetAll<Alarm>();
         }
+
+
+        public IEnumerable<Alarm> GetByAlarmingParameter(string AlarmingParameter)
+        {
+
+            const string query = @"SELECT name, description, silos_id, severityalarm, threshold,  user_id
+FROM alarm
+WHERE alarming_parameter=@AlarmingParameter";
+            using var connection = new NpgsqlConnection(_connectionString);
+            return connection.Query<Alarm>(query);
+
+            connection.Close();
+
+        }
+
+        public IEnumerable<Alarm> GetById(int Id)
+        {
+
+            const string query = @"SELECT name, description, silos_id, severityalarm, threshold, alarming_parameter, user_id
+FROM alarm
+WHERE id=@Id";
+            using var connection = new NpgsqlConnection(_connectionString);
+            return connection.Query<Alarm>(query);
+
+            connection.Close();
+
+        }
+
+
         /// <summary>
         /// call the database to insert a new Alarm throgh dapper contrib
         /// </summary>
         /// <param name="entity"></param>
-        public void Insert(Alarm entity)
+        public void Insert(Alarm entity, string AlarmingParameter, )
         {
             const string query = @"
 INSERT INTO alarm(name, description, silos_id, severityalarm, threshold, alarming_parameter, user_id)
-VALUES (@Name, @Description, @Silos_id, @Severity_Alarm, @Threshold, @Alarming_parameter, @User_id)"; // gli passo i parametri di query con gli stessi nomi della classe category perchè dupper me li trasforma in parametri di query
+
+VALUES (@Name, @Description, @Silos_id, @Severity_Alarm, @Threshold, @AlarmingParameter, )"; // gli passo i parametri di query con gli stessi nomi della classe category perchè dupper me li trasforma in parametri di query
 
 
             using var connection = new NpgsqlConnection(_connectionString);
@@ -81,6 +112,12 @@ VALUES (@Name, @Description, @Silos_id, @Severity_Alarm, @Threshold, @Alarming_p
             connection.Close();
 
         }
+
+        public void Insert(Alarm entity)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// call the database to update an Alarm throgh dapper contrib
         /// </summary>
