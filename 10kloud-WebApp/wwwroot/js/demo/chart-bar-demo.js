@@ -28,6 +28,11 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Bar Chart Example
+var levels = window.misurazione;
+var livello=[];
+levels.forEach(el => {
+    livello.push(el.level);
+});
 var ctx = document.getElementById("myBarChart");
 var myBarChart = new Chart(ctx, {
   type: 'bar',
@@ -37,8 +42,8 @@ var myBarChart = new Chart(ctx, {
       label: "Sensore ",
       backgroundColor: "#4e73df",
       hoverBackgroundColor: "#2e59d9",
-      borderColor: "#4e73df",
-      data: [1, 3, 6, 4, 3, 7, 8],
+        borderColor: "#4e73df",
+        data: livello,
     }],
   },
   options: {

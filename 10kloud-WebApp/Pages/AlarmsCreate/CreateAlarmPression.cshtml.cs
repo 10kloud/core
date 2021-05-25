@@ -28,8 +28,6 @@ namespace _10kloud_CRUD.Pages.AlarmsCreate
         [BindProperty]
         public Alarm Input { get; set; }
 
-
-
        
         public void OnGet()
         {

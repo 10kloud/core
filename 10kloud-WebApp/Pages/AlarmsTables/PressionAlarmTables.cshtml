@@ -20,67 +20,25 @@
                         <th>Soglia Di Allarme</th>
                         <th>Parametro Dell'Allarme</th>
                         <th>Gravità Allarme</th>
-                        <th>Id Utente</th>
+                        <th>Email Utente</th>
                         <th style="text-align: center;">Opzioni</th>
                     </tr>
                 </thead>
+                @foreach (var item in Model.Allarmi)
+                {
+            <tr>
+                <td>@item.Silos_Id</td>
+                <td>@item.Id</td>
 
-                <tr>
-                    <td>1</td>
-                    <td>0.5</td>
-                    <td>pressione</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td style="width: auto; text-align: center;"><button type="button" class="btn btn-primary">Modifica</button><a asp-page="/AlarmsDelete/Delete"><button type="button" class="btn btn-danger ml-5">Elimina</button></a></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0.5</td>
-                    <td>pressione</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td style="width: auto; text-align: center;"><button type="button" class="btn btn-primary">Modifica</button><a asp-page="/AlarmsDelete/Delete"><button type="button" class="btn btn-danger ml-5">Elimina</button></a></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0.5</td>
-                    <td>pressione</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td style="width: auto; text-align: center;"><button type="button" class="btn btn-primary">Modifica</button><a asp-page="/AlarmsDelete/Delete"><button type="button" class="btn btn-danger ml-5">Elimina</button></a></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0.5</td>
-                    <td>pressione</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td style="width: auto; text-align: center;"><button type="button" class="btn btn-primary">Modifica</button><a asp-page="/AlarmsDelete/Delete"><button type="button" class="btn btn-danger ml-5">Elimina</button></a></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0.5</td>
-                    <td>pressione</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td style="width: auto; text-align: center;"><button type="button" class="btn btn-primary">Modifica</button><a asp-page="/AlarmsDelete/Delete"><button type="button" class="btn btn-danger ml-5">Elimina</button></a></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0.5</td>
-                    <td>pressione</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td style="width: auto; text-align: center;"><button type="button" class="btn btn-primary">Modifica</button><a asp-page="/AlarmsDelete/Delete"><button type="button" class="btn btn-danger ml-5">Elimina</button></a></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>0.5</td>
-                    <td>pressione</td>
-                    <td>3</td>
-                    <td>1</td>
-                    <td style="width: auto; text-align: center;"><button type="button" class="btn btn-primary">Modifica</button><a asp-page="/AlarmsDelete/Delete"><button type="button" class="btn btn-danger ml-5">Elimina</button></a></td>
-                </tr>
+                <td>@item.Threshold</td>
+                <td>@item.Alarming_Parameter</td>
+                <td>@item.Severity_Alarm</td>
+                <td>@item.user_email</td>
+                <td style="width: auto; text-align: center;"><button type="button" class="btn btn-primary">Modifica</button><a asp-page="/AlarmsDelete/Delete"><button type="button" class="btn btn-danger ml-5">Elimina</button></a></td>
+            </tr>
+                }
+                
+
             </table>
         </div>
     </div>

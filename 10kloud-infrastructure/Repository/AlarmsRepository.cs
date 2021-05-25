@@ -68,14 +68,17 @@ namespace _10kloud_infrastructure.Repository
         }
 
 
-        public IEnumerable<Alarm> GetByAlarmingParameter(string AlarmingParameter)
+        public IEnumerable<Alarm> GetByAlarmingParameter(string alarming_parameter)
         {
 
-            const string query = @"SELECT name, description, silos_id, severityalarm, threshold,  user_id
+            const string query = @"SELECT name, description, silos_id, severityalarm, threshold,  user_email
 FROM alarm
-WHERE alarming_parameter=@AlarmingParameter";
+WHERE alarming_parameter=@Alarming_Parameter";
             using var connection = new NpgsqlConnection(_connectionString);
-            return connection.Query<Alarm>(query);
+            return connection.Query<Alarm>(query, new
+            {
+                Alarming_Parameter = alarming_parameter
+            });
 
             connection.Close();
 
