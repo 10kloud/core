@@ -40,7 +40,7 @@ namespace _10kloud_AppCore.Entities
         /// severity of the alarm( information, error, danger etc..)
         /// </summary>
         [Display(Name = "Gravità Allarme")]
-        public int Serverity_Alarm { get; set; }
+        public int Severity_Alarm { get; set; }
 
         /// <summary>
         /// User that created the Alarm

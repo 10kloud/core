@@ -25,3 +25,18 @@ C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-infrastructure\bin\De
 C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-infrastructure\bin\Debug\net5.0\10kloud-AppCore.dll
 C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-infrastructure\bin\Debug\net5.0\10kloud-AppCore.pdb
 C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-infrastructure\obj\Debug\net5.0\10kloud-infrastructure.csproj.CopyComplete
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\bin\Debug\net5.0\10kloud-infrastructure.deps.json
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\bin\Debug\net5.0\10kloud-infrastructure.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\bin\Debug\net5.0\ref\10kloud-infrastructure.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\bin\Debug\net5.0\10kloud-infrastructure.pdb
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\bin\Debug\net5.0\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\bin\Debug\net5.0\10kloud-AppCore.pdb
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\obj\Debug\net5.0\10kloud-infrastructure.csprojAssemblyReference.cache
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\obj\Debug\net5.0\10kloud-infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\obj\Debug\net5.0\10kloud-infrastructure.AssemblyInfoInputs.cache
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\obj\Debug\net5.0\10kloud-infrastructure.AssemblyInfo.cs
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\obj\Debug\net5.0\10kloud-infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\obj\Debug\net5.0\10kloud-infrastructure.csproj.CopyComplete
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\obj\Debug\net5.0\10kloud-infrastructure.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\obj\Debug\net5.0\ref\10kloud-infrastructure.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-infrastructure\obj\Debug\net5.0\10kloud-infrastructure.pdb

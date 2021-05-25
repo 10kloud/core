@@ -72,12 +72,13 @@ namespace _10kloud_infrastructure.Repository
         public void Insert(Alarm entity)
         {
             const string query = @"
-INSERT INTO alarm(name, description, silos_id, severity_alarm, threshold, alarming_parameter, user_id)
-VALUES (@Name, @Description, @Silos_id, @Severity_alarm, @Threshold, @Alarming_parameter, @User_id)"; // gli passo i parametri di query con gli stessi nomi della classe category perchè dupper me li trasforma in parametri di query
+INSERT INTO alarm(name, description, silos_id, severityalarm, threshold, alarming_parameter, user_id)
+VALUES (@Name, @Description, @Silos_id, @Severity_Alarm, @Threshold, @Alarming_parameter, @User_id)"; // gli passo i parametri di query con gli stessi nomi della classe category perchè dupper me li trasforma in parametri di query
 
 
             using var connection = new NpgsqlConnection(_connectionString);
             connection.Execute(query, entity);
+            connection.Close();
 
         }
         /// <summary>

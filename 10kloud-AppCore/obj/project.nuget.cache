@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3gm09ZJeFfzw96DSBF806ZTxQVYZl0xS/VN0acBlqiSugKVo/ZycoUMr0KsWrlz/V1DzRpGkZkrdkqiSXZcR8A==",
+  "dgSpecHash": "4GVDc7XUMPhA8IybBZyRU0KcTJGNTXrF6lsRduXQYMPWrDSvqHRDAlfIpsR3+FnYGXdks5iKzhUvj+fQbwZl6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core\\10kloud-AppCore\\10kloud-AppCore.csproj",
+  "projectFilePath": "C:\\Users\\Bolzan Luca\\ITS\\Project Work\\Backend\\core - tryFE\\10kloud-AppCore\\10kloud-AppCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bolzan Luca\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\Bolzan Luca\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",
