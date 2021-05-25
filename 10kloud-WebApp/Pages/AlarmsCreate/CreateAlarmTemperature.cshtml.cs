@@ -29,7 +29,7 @@ namespace _10kloud_CRUD.Pages.AlarmsCreate
         {
             if (ModelState.IsValid)
             {
-                _alarmService.Insert(Input, "temperatura");
+                _alarmService.Insert(Input, "temperatura", User.Identity.Name);
                 return RedirectToPage("AlarmsTables/TemperatureAlarmTables");
             }
             return Page();

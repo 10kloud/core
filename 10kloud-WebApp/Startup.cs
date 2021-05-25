@@ -5,6 +5,7 @@ using _10kloud_infrastructure.Repository;
 using _10kloud_WebApp.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -43,6 +44,8 @@ namespace _10kloud_WebApp
             services.AddSingleton<IRepositoryUsers, UsersRepository>();
             services.AddSingleton<IServiceUsers, UsersService>();
             services.AddSingleton<IServiceAlarms, AlarmsService>();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

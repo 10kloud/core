@@ -22,10 +22,7 @@ namespace _10kloud_AppCore.Entities
         /// user Email
         /// </summary>
         public string Email { get; set; }
-        /// <summary>
-        /// User Password
-        /// </summary>
-        /// 
+
         public string NormalizedEmail { get; set; }
 
         public bool EmailConfirmed { get; set; }
@@ -43,7 +40,12 @@ namespace _10kloud_AppCore.Entities
         public bool TwoFactorEnabled { get; set; }
 
         public DateTime LockoutEnd { get; set; }
-        public string Password { get; set; }
+
+        public bool LockoutEnabled { get; set; }
+
+        public int AccessFailedCount { get; set; }
+
+
         /// <summary>
         /// User Permission
         /// </summary>

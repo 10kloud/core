@@ -13,7 +13,7 @@ namespace _10kloud_CRUD.Pages.AlarmsTables
         private readonly IServiceAlarms _alarmService;
         public void OnGet()
         {
-            _alarmService.GetByAlarmingParameter(1);
+            _alarmService.GetByAlarmingParameter("pressione");
         }
     }
 }
