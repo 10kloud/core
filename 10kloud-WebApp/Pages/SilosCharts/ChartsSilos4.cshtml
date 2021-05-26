@@ -1,0 +1,51 @@
+﻿@page
+@model _10kloud_CRUD.Pages.SilosCharts.Index1Model
+@{
+    Layout = "_LayoutSilos1";
+}
+<meta http-equiv="refresh" content="10">
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <div class="col-xl-12 col-lg-7 d-flex justify-content-start">
+
+            <!-- Area Chart -->
+            <div class="card shadow w-100">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Pressione Interna</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area" style="height: 480px;">
+                        <canvas id="pressionS1"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Area Chart -->
+            <div class="card shadow ml-4 w-100">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Temperatura esterna</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area" style="height: 480px;">
+                        <canvas id="temperatureS1"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Area Chart -->
+            <div class="card shadow ml-4 w-100">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Umidità esterna</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area" style="height: 480px;">
+                        <canvas id="umidityS1"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.container-fluid -->

@@ -1,10 +1,21 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    Layout = "_LayoutDashboard";
 }
+<script>
+    var Misurazione=
+</script>
+<meta http-equiv="refresh" content="10">
+<!-- Bar Chart -->
+<div class="card shadow mb-4 ml-4 mr-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Livello liquido Silos</h6>
+    </div>
+    <div class="card-body">
+        <div class="chart-bar">
+            <canvas id="myBarChart"></canvas>
+        </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
 </div>
