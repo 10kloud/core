@@ -118,6 +118,13 @@ var myLineChart = new Chart(ctx, {
 });
 
 // Area Chart temperature
+var levels = window.misurazione;
+var livello = [];
+var lv;
+lv = levels.level;
+levels.forEach(el => {
+    livello.push(el.level);
+});
 var ctx = document.getElementById("temperatureS1");
 var myLineChart = new Chart(ctx, {
   type: 'line',
@@ -135,8 +142,8 @@ var myLineChart = new Chart(ctx, {
       pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
-      pointBorderWidth: 2,
-      data: [10, 12, 20, 17, 10, 5, 4, 1, -2, -4, -4, -3],
+        pointBorderWidth: 2,
+        data: lv,
     }],
   },
   options: {
@@ -209,6 +216,7 @@ var myLineChart = new Chart(ctx, {
 });
 
 // Area Chart umidity
+
 var ctx = document.getElementById("umidityS1");
 var myLineChart = new Chart(ctx, {
   type: 'line',

@@ -4,11 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using _10kloud_AppCore.Entities;
 using _10kloud_AppCore.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace _10kloud_CRUD.Pages.AlarmsTables
 {
+    [Authorize]
+
     public class PressionAlarmTablesModel : PageModel
     {
         private readonly IServiceAlarms _alarmService;
@@ -24,7 +27,7 @@ namespace _10kloud_CRUD.Pages.AlarmsTables
         public void OnGet()
         {
              Allarmi=_alarmService.GetByAlarmingParameter("pressione");
-            var a = 0;
+       
         }
 
     }

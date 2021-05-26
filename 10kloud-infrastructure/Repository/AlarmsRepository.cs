@@ -41,9 +41,10 @@ namespace _10kloud_infrastructure.Repository
         /// <param name="id"></param>
         public void Delete(int id)
         {
+           
+            const string query = @"DELETE FROM alarm WHERE Id = @Id";
             using var connection = new NpgsqlConnection(_connectionString);
-
-            connection.Delete<Alarm>(new alarm { Id = id });
+             connection.Execute(query, new {Id= id});
 
         }
         /// <summary>
@@ -56,6 +57,7 @@ namespace _10kloud_infrastructure.Repository
 
             using var connection = new NpgsqlConnection(_connectionString);
             return connection.Get<Alarm>(id);
+
         }
         /// <summary>
         /// call the database to get all Alarms throgh dapper contrib
@@ -73,7 +75,7 @@ namespace _10kloud_infrastructure.Repository
 
             const string query = @"SELECT name, description, silos_id, severityalarm, threshold,  user_email
 FROM alarm
-WHERE alarming_parameter=@Alarming_Parameter";
+WHERE alarming_parameter=@Alarming_Parameter ORDER BY id";
             using var connection = new NpgsqlConnection(_connectionString);
             return connection.Query<Alarm>(query, new
             {

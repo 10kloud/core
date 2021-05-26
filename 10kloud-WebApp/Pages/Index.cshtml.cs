@@ -18,6 +18,7 @@ namespace _10kloud_WebApp.Pages
 {
 
 
+    //[Authorize(Roles ="admin")]
     [Authorize]
     public class IndexModel : PageModel
     {
@@ -26,6 +27,7 @@ namespace _10kloud_WebApp.Pages
         private readonly IServiceAlarms _ServiceAlarms;
 
         private readonly ILogger<IndexModel> _logger;
+
         public IEnumerable<Silos> Dati;
         public IndexModel(ILogger<IndexModel> logger)
         {
@@ -38,7 +40,7 @@ namespace _10kloud_WebApp.Pages
         {
             Dati = await GetApi.GetData();
 
-
+            var x = User.IsInRole("admin");
         }
     }
     public static class JavaScriptConvert

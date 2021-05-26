@@ -1,8 +1,12 @@
 ﻿@page
 @model _10kloud_CRUD.Pages.SilosCharts.ChartsSilos1Model
 @{
-    Layout = "_LayoutSilos1";
+    Layout = "_Layout";
 }
+<script>
+    var misurazione=@JavaScriptConvert.SerializeObject(Model.Dati);
+
+</script>
 <meta http-equiv="refresh" content="10">
 <!-- Begin Page Content -->
 <div class="container-fluid">

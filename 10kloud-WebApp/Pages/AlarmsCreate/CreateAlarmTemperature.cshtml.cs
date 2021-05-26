@@ -4,11 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using _10kloud_AppCore.Entities;
 using _10kloud_AppCore.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace _10kloud_CRUD.Pages.AlarmsCreate
 {
+    [Authorize]
+
     public class CreateAlarmTemperatureModel : PageModel
     {
         private readonly IServiceAlarms _alarmService;
@@ -29,6 +32,8 @@ namespace _10kloud_CRUD.Pages.AlarmsCreate
         {
             if (ModelState.IsValid)
             {
+                Input.User_Email = User.Identity.Name;
+                Input.Alarming_Parameter = "temperatura";
                 _alarmService.Insert(Input);
                 return RedirectToPage("AlarmsTables/TemperatureAlarmTables");
             }
