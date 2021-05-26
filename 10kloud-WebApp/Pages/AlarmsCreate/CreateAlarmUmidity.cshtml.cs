@@ -29,7 +29,7 @@ namespace _10kloud_CRUD.Pages.AlarmsCreate
             {
                 if (ModelState.IsValid)
                 {
-                    _alarmService.Insert(Input, "umidita", User.Identity.Name);
+                    _alarmService.Insert(Input);
                     return RedirectToPage("AlarmsTables/UmidityAlarmTables");
                 }
                 return Page();

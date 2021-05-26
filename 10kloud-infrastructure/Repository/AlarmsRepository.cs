@@ -43,7 +43,7 @@ namespace _10kloud_infrastructure.Repository
         {
             using var connection = new NpgsqlConnection(_connectionString);
 
-            connection.Delete<Alarm>(new Alarm { Id = id });
+            connection.Delete<Alarm>(new alarm { Id = id });
 
         }
         /// <summary>
@@ -102,11 +102,11 @@ WHERE id=@Id";
         /// call the database to insert a new Alarm throgh dapper contrib
         /// </summary>
         /// <param name="entity"></param>
-        public void Insert(Alarm entity, string alarming_parameter, string user_email)
+        public void Insert(Alarm entity)
         {
             const string query = @"
 INSERT INTO alarm( NAME, description, silos_id, severityalarm, threshold, alarming_parameter, user_email)
-VALUES (@Name, @Description, @Silos_id, @Severity_Alarm, @Threshold, @alarming_parameter, @user_email)"; // gli passo i parametri di query con gli stessi nomi della classe category perchè dupper me li trasforma in parametri di query
+VALUES (@Name, @Description, @Silos_id, @Severity_Alarm, @Threshold, @Alarming_Parameter, @User_Email)"; // gli passo i parametri di query con gli stessi nomi della classe category perchè dupper me li trasforma in parametri di query
 
             /*
              * INSERT INTO alarm( NAME, description, silos_id, severityalarm, threshold, alarming_parameter, user_email)
@@ -119,10 +119,7 @@ VALUES ( 'gino','descrizione', 1, 2, 7, 'pressione', 'b@b.it')
 
         }
 
-        public void Insert(Alarm entity)
-        {
-            throw new NotImplementedException();
-        }
+      
 
         /// <summary>
         /// call the database to update an Alarm throgh dapper contrib

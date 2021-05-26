@@ -19,7 +19,7 @@ namespace _10kloud_AppCore.Interfaces.Services
 
         IEnumerable<Alarm> GetByAlarmingParameter(string AlarmingParameter);
 
-        void Insert(Alarm item, string AlarmingParameter, String user_email);
+        void Insert(Alarm item);
         void Update(Alarm item);
     }
 }

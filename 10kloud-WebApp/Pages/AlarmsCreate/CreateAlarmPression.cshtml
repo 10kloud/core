@@ -6,53 +6,63 @@
 
 
 <!-- alarm form -->
-<form class="ml-4 mr-4" method="post" >
+<form class="ml-4 mr-4" method="post" id="PressionAllarmInput">
     <div class="form-group">
         <label asp-for="Input.Name" for="exampleFormControlInput1">Nome Allarme</label>
         <input asp-for="Input.Name" class="form-control" id="exampleFormControlInput1" type="text">
         <span asp-validation-for="Input.Name" class="text-danger"></span>
     </div>
     <div class="form-group">
+        <label asp-for="Input.Description" for="exampleFormControlInput1">Descrizione Allarme</label>
+        <textarea asp-for="Input.Description" form="PressionAllarmInput" class="form-control" id="exampleFormControlTextarea">Descrivi L'allarme...</textarea>
+        <span asp-validation-for="Input.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
         <label for="exampleFormControlSelect1" asp-for="Input.Silos_Id"></label>
-        <select class="form-control" id="exampleFormControlSelect1" asp-for="Input.Silos_Id">
-            <option>Silos1</option>
-            <option>Silos2</option>
-            <option>Silos3</option>
-            <option>Silos4</option>
-            <option>Silos5</option>
-            <option>Silos6</option>
-            <option>Silos7</option>
+        <select asp-for="Input.Silos_Id" class="form-control" id="exampleFormControlSelect1">
+            <option value="1">Silos 1</option>
+            <option value="2">Silos 2</option>
+            <option value="3">Silos 3</option>
+            <option value="4">Silos 4</option>
+            <option value="5">Silos 5</option>
+            <option value="6">Silos 6</option>
+            <option value="7">Silos 7</option>
         </select>
+        <span asp-validation-for="Input.Silos_Id" class="text-danger"></span>
+
     </div>
     <div class="form-group">
         <label for="exampleFormControlSelect1" asp-for="Input.Threshold"></label>
-        <select class="form-control" id="exampleFormControlSelect1" >
-            <option>0,1</option>
-            <option>0,2</option>
-            <option>0,3</option>
-            <option>0,4</option>
-            <option>0,5</option>
-            <option>0,6</option>
-            <option>0,7</option>
-            <option>0,8</option>
-            <option>0,9</option>
-            <option>1,0</option>
+        <select asp-for="Input.Threshold" class="form-control" id="exampleFormControlSelect1">
+            <option value="0.1">0.1 bar</option>
+            <option value="0.2">0.2 bar</option>
+            <option value="0.3">0.3 bar</option>
+            <option value="0.4">0.4 bar</option>
+            <option value="0.5">0.5 bar</option>
+            <option value="0.6">0.6 bar</option>
+            <option value="0.7">0.7 bar</option>
+            <option value="0.8">0.8 bar</option>
+            <option value="0.9">0.9 bar</option>
+            <option value="1.0">1 bar</option>
         </select>
-    </div>
+        <span asp-validation-for="Input.Threshold" class="text-danger"></span>
 
+    </div>
     <div class="form-group">
         <label for="exampleFormControlSelect1" asp-for="Input.Severity_Alarm"></label>
-        <select class="form-control" id="exampleFormControlSelect1" asp-for="Input.Severity_Alarm">
-
-            <option>Allarme</option>
-            <option>Errore</option>
-            <option>Pericolo</option>
+        <select asp-for="Input.Severity_Alarm" class="form-control" id="exampleFormControlSelect1">
+            <option value="1">Allarme</option>
+            <option value="2">Errore</option>
+            <option value="3">Pericolo</option>
         </select>
+        <span asp-validation-for="Input.Severity_Alarm" class="text-danger"></span>
+
     </div>
 
-    <button type="submit" class="btn btn-primary ml-4" style="width: 80px;">Salva</button>
+    <button type="submit" class="btn btn-primary ml-4" style="width: 80px;">Salva </button>
     <button type="button" class="btn btn-danger ml-4" style="width: 80px;">Annulla</button>
 </form>
+
 @section Scripts
 {
     <partial name="_ValidationScriptsPartial" />
