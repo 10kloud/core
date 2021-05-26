@@ -1,12 +1,13 @@
 ﻿@page
-@model _10kloud_CRUD.Pages.AlarmsCreate.CreateAlarmPressionModel
+@model _10kloud_CRUD.Pages.editAlarm.EditAlarmModel
 @{
     Layout = "_LayoutPressionCreate";
+
 }
 
 <!-- alarm form -->
-<form class="ml-4 mr-4" method="post">
-    <div class="form-group"><label asp-for="Input.Name" for="exampleFormControlInput1">Nome Allarme</label><input class="form-control" id="exampleFormControlInput1" type="text"></div>
+<form class="ml-4 mr-4">
+    <div class="form-group"><label for="exampleFormControlInput1">Nome Allarme</label><input class="form-control" id="exampleFormControlInput1" type="text"></div>
     <div class="form-group">
         <label for="exampleFormControlSelect1" asp-for="Input.Silos_Id"></label><select class="form-control" id="exampleFormControlSelect1">
             <option value="1">Silos1</option>
@@ -32,19 +33,19 @@
             <option>1.0</option>
         </select>
     </div>
-
     <div class="form-group">
-        <label for="exampleFormControlSelect1" asp-for="Input.Severity_Alarm"></label><select class="form-control" id="exampleFormControlSelect1">
-        
-            <option>Allarme</option>
-            <option>Errore</option>
-            <option>Pericolo</option>
+        <label for="exampleFormControlSelect1" asp-for="Input.Alarming_Parameter"></label><select class="form-control" id="exampleFormControlSelect1">
+            <option>Pressione</option>
         </select>
     </div>
-
+    <div class="form-group">
+        <label for="exampleFormControlSelect1" asp-for="Input.Threshold"></label><select class="form-control" id="exampleFormControlSelect1">
+        </select>
+    </div>
+</form>
 <button type="submit" class="btn btn-primary ml-4" style="width: 80px;">Salva</button>
 <button type="button" class="btn btn-danger ml-4" style="width: 80px;">Annulla</button>
-</form>
+
 
 
 <!-- End of Main Content -->
