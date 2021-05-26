@@ -105,10 +105,14 @@ WHERE id=@Id";
         public void Insert(Alarm entity, string alarming_parameter, string user_email)
         {
             const string query = @"
-INSERT INTO alarm(name, description, silos_id, severityalarm, threshold, alarming_parameter, user_email)
+INSERT INTO alarm( NAME, description, silos_id, severityalarm, threshold, alarming_parameter, user_email)
 VALUES (@Name, @Description, @Silos_id, @Severity_Alarm, @Threshold, @alarming_parameter, @user_email)"; // gli passo i parametri di query con gli stessi nomi della classe category perchè dupper me li trasforma in parametri di query
 
-
+            /*
+             * INSERT INTO alarm( NAME, description, silos_id, severityalarm, threshold, alarming_parameter, user_email)
+VALUES ( 'gino','descrizione', 1, 2, 7, 'pressione', 'b@b.it')
+             *
+             */
             using var connection = new NpgsqlConnection(_connectionString);
             connection.Execute(query, entity);
             connection.Close();

@@ -31,6 +31,7 @@ namespace _10kloud_CRUD.Pages.AlarmsCreate
        
         public void OnGet()
         {
+       
             Input = new Alarm();
 
         }
@@ -38,6 +39,8 @@ namespace _10kloud_CRUD.Pages.AlarmsCreate
         {
             if (ModelState.IsValid)
             {
+            var a =0;
+
                 _alarmService.Insert(Input, "pressione", User.Identity.Name);
                 return RedirectToPage("/AlarmsTables/PressionAlarmTables");
             }

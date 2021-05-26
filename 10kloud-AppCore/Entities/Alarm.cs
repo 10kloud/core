@@ -46,7 +46,7 @@ namespace _10kloud_AppCore.Entities
         /// User that created the Alarm
         /// </summary>
         [Display(Name = "Email Utente")]
-        public int user_email { get; set; }
+        public string user_email { get; set; }
 
     }
 }

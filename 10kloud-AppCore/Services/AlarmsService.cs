@@ -68,6 +68,7 @@ namespace _10kloud_AppCore.Services
         /// <param name="item"></param>
         public void Insert(Alarm item, string AlarmingParameter, string user_email)
         {
+
             _alarmsRepository.Insert(item,AlarmingParameter, user_email);
         }
 
