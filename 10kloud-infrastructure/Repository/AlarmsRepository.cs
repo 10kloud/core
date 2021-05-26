@@ -101,7 +101,7 @@ WHERE id=@Id";
 
         public IEnumerable<Alarm> GetBySilos(int silos_id)
         {
-            const string query = @"SELECT name, description, severityalarm, threshold, alarming_parameter, user_id
+            const string query = @"SELECT name, description, severityalarm, threshold, alarming_parameter, user_email
 FROM alarm
 WHERE silos_id=@SilosId";
             using var connection = new NpgsqlConnection(_connectionString);

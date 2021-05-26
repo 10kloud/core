@@ -15,6 +15,10 @@ namespace _10kloud_CRUD.Pages.SilosCharts
     {
         private readonly IServiceAlarms _alarmService;
 
+        public ChartsSilos2Model(IServiceAlarms alarmService)
+        {
+            _alarmService = alarmService;
+        }
 
         public IEnumerable<Alarm> Allarmi { get; set; }
 

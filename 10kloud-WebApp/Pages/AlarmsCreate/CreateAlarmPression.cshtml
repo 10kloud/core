@@ -6,7 +6,7 @@
 
 
 <!-- alarm form -->
-<form class="ml-4 mr-4" method="post" id="PressionAllarmInput">
+<form class="ml-4 mr-4" method="post" >
     <div class="form-group">
         <label asp-for="Input.Name" for="exampleFormControlInput1">Nome Allarme</label>
         <input asp-for="Input.Name" class="form-control" id="exampleFormControlInput1" type="text">
@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
         <label asp-for="Input.Description" for="exampleFormControlInput1">Descrizione Allarme</label>
-        <textarea asp-for="Input.Description" form="PressionAllarmInput" class="form-control" id="exampleFormControlTextarea">Descrivi L'allarme...</textarea>
+        <textarea asp-for="Input.Description" class="form-control" id="exampleFormControlTextarea">Descrivi L'allarme...</textarea>
         <span asp-validation-for="Input.Description" class="text-danger"></span>
     </div>
     <div class="form-group">
@@ -31,6 +31,7 @@
         <span asp-validation-for="Input.Silos_Id" class="text-danger"></span>
 
     </div>
+
     <div class="form-group">
         <label for="exampleFormControlSelect1" asp-for="Input.Threshold"></label>
         <select asp-for="Input.Threshold" class="form-control" id="exampleFormControlSelect1">

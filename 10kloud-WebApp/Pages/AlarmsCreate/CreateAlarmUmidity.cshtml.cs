@@ -13,31 +13,33 @@ namespace _10kloud_CRUD.Pages.AlarmsCreate
     [Authorize]
 
     public class CreateAlarmUmidityModel : PageModel
+    {
+        private readonly IServiceAlarms _alarmService;
+
+        public CreateAlarmUmidityModel(IServiceAlarms alarmService)
         {
-            private readonly IServiceAlarms _alarmService;
+            _alarmService = alarmService;
+        }
 
-            public CreateAlarmUmidityModel(IServiceAlarms alarmService)
-            {
-                _alarmService = alarmService;
-            }
+        [BindProperty]
+        public Alarm Input { get; set; }
 
-            [BindProperty]
-            public Alarm Input { get; set; }
-            public void OnGet()
-            {
-                Input = new Alarm();
+        public void OnGet()
+        {
+            Input = new Alarm();
 
-            }
-            public IActionResult OnPost()
+        }
+        public IActionResult OnPost()
+        {
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
                 Input.User_Email = User.Identity.Name;
                 Input.Alarming_Parameter = "umidita";
+
                 _alarmService.Insert(Input);
-                    return RedirectToPage("AlarmsTables/UmidityAlarmTables");
-                }
-                return Page();
+                return RedirectToPage("/AlarmsTables/UmidityAlaramTables");
             }
+            return Page();
         }
+    }
 }

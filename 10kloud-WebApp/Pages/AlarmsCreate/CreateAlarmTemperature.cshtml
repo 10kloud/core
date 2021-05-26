@@ -8,8 +8,15 @@
 <!-- alarm form -->
 <form class="ml-4 mr-4" method="post">
     <div class="form-group">
-    <label asp-for="Input.Name" for="exampleFormControlInput1">Nome Allarme</label>
-    <input asp-for="Input.Name" class="form-control" id="exampleFormControlInput1" type="text">
+        <label asp-for="Input.Name" for="exampleFormControlInput1">Nome Allarme</label>
+        <input asp-for="Input.Name" class="form-control" id="exampleFormControlInput1" type="text" />
+        <span asp-validation-for="Input.Name" class="text-danger"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Input.Description" for="exampleFormControlInput1">Descrizione Allarme</label>
+        <textarea asp-for="Input.Description" class="form-control" id="exampleFormControlTextarea">Descrivi L'allarme...</textarea>
+        <span asp-validation-for="Input.Description" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label for="exampleFormControlSelect1" asp-for="Input.Silos_Id"></label>
@@ -28,18 +35,20 @@
     <div class="form-group">
         <label for="exampleFormControlSelect1" asp-for="Input.Threshold"></label>
         <select asp-for="Input.Threshold" class="form-control" id="exampleFormControlSelect1">
-            <option>40</option>
-            <option>35</option>
-            <option>30</option>
-            <option>25</option>
-            <option>20</option>
-            <option>15</option>
-            <option>10</option>
-            <option>5</option>
-            <option>0</option>
-            <option>-5</option>
-            <option>-10</option>
+            <option value="40">40</option>
+            <option value="35">35</option>
+            <option value="30">30</option>
+            <option value="25">25</option>
+            <option value="20">20</option>
+            <option value="15">15</option>
+            <option value="10">10</option>
+            <option value="5">5</option>
+            <option value="0">0</option>
+            <option value="-5">-5</option>
+            <option value="-10">-10</option>
         </select>
+        <span asp-validation-for="Input.Threshold" class="text-danger"></span>
+
     </div>
     <div class="form-group">
         <label for="exampleFormControlSelect1" asp-for="Input.Severity_Alarm"></label>

@@ -35,7 +35,7 @@ namespace _10kloud_CRUD.Pages.AlarmsCreate
                 Input.User_Email = User.Identity.Name;
                 Input.Alarming_Parameter = "temperatura";
                 _alarmService.Insert(Input);
-                return RedirectToPage("AlarmsTables/TemperatureAlarmTables");
+                return RedirectToPage("/AlarmsTables/TemperatureAlarmTables");
             }
             return Page();
         }

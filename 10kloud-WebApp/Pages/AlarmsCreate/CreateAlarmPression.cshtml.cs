@@ -17,21 +17,21 @@ namespace _10kloud_CRUD.Pages.AlarmsCreate
     public class CreateAlarmPressionModel : PageModel
     {
         private readonly IServiceAlarms _alarmService;
-       
+
         public CreateAlarmPressionModel(IServiceAlarms alarmService)
         {
             _alarmService = alarmService;
-           
+
         }
-      //  var userId = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+        //  var userId = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
 
         [BindProperty]
         public Alarm Input { get; set; }
 
-       
+
         public void OnGet()
         {
-       
+
             Input = new Alarm();
 
         }
@@ -39,7 +39,7 @@ namespace _10kloud_CRUD.Pages.AlarmsCreate
         {
             if (ModelState.IsValid)
             {
-           
+
                 Input.User_Email = User.Identity.Name;
                 Input.Alarming_Parameter = "pressione";
 
@@ -48,6 +48,6 @@ namespace _10kloud_CRUD.Pages.AlarmsCreate
             }
             return Page();
         }
-       
+
     }
 }

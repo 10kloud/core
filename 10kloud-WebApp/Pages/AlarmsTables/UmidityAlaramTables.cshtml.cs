@@ -25,7 +25,7 @@ namespace _10kloud_CRUD.Pages.AlarmsTables
 
         public void OnGet()
         {
-            Allarmi = _alarmService.GetByAlarmingParameter("umidità");
+            Allarmi = _alarmService.GetByAlarmingParameter("umidita");
 
         }
     }
