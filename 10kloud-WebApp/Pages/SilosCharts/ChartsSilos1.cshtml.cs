@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using _10kloud_AppCore;
+using _10kloud_AppCore.Entities;
 using _10kloud_AppCore.Interfaces.Services;
 using _10kloud_infrastructure;
 using Microsoft.AspNetCore.Authorization;
@@ -21,7 +22,7 @@ namespace _10kloud_CRUD.Pages.SilosCharts
     {
         public ApiConnection GetApi { get; set; }
 
-        private readonly IServiceAlarms _ServiceAlarms;
+        private readonly IServiceAlarms _alarmService;
 
         private readonly ILogger<IndexModel> _logger;
 
@@ -32,9 +33,11 @@ namespace _10kloud_CRUD.Pages.SilosCharts
             _logger = logger;
             Dati = dati;
         }
+        public IEnumerable<Alarm> Allarmi { get; set; }
 
         public async void OnGet()
         {
+            Allarmi = _alarmService.GetBySilos(1);
             Dati = await GetApi.GetSingleData(1);
         }
     }

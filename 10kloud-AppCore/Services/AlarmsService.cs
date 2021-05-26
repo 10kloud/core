@@ -62,6 +62,11 @@ namespace _10kloud_AppCore.Services
             return _alarmsRepository.GetByAlarmingParameter(AlarmingParameter);
         }
 
+        public IEnumerable<Alarm> GetBySilos(int SilosId)
+        {
+            return _alarmsRepository.GetBySilos(SilosId);
+        }
+
         /// <summary>
         /// Insert a new Alarm
         /// </summary>

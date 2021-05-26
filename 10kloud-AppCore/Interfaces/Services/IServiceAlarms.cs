@@ -18,6 +18,8 @@ namespace _10kloud_AppCore.Interfaces.Services
         void Delete(int id);
 
         IEnumerable<Alarm> GetByAlarmingParameter(string AlarmingParameter);
+        public IEnumerable<Alarm> GetBySilos(int SilosId);
+
 
         void Insert(Alarm item);
         void Update(Alarm item);

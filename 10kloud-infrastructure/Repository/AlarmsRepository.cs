@@ -99,6 +99,20 @@ WHERE id=@Id";
 
         }
 
+        public IEnumerable<Alarm> GetBySilos(int silos_id)
+        {
+            const string query = @"SELECT name, description, severityalarm, threshold, alarming_parameter, user_id
+FROM alarm
+WHERE silos_id=@SilosId";
+            using var connection = new NpgsqlConnection(_connectionString);
+            return connection.Query<Alarm>(query, new
+            {
+                SilosId = silos_id
+            });
+
+            connection.Close();
+        }
+
 
         /// <summary>
         /// call the database to insert a new Alarm throgh dapper contrib
