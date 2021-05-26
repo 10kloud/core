@@ -1,6 +1,8 @@
 // Set new default font family and font color to mimic Bootstrap's default styling
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
+var livello = [];
+
 
 function number_format(number, decimals, dec_point, thousands_sep) {
   // *     example: number_format(1234.56, 2, ',', ' ');
@@ -119,12 +121,8 @@ var myLineChart = new Chart(ctx, {
 
 // Area Chart temperature
 var levels = window.misurazione;
-var livello = [];
-var lv;
-lv = levels.level;
-levels.forEach(el => {
-    livello.push(el.level);
-});
+livello.push(levels.level);
+
 var ctx = document.getElementById("temperatureS1");
 var myLineChart = new Chart(ctx, {
   type: 'line',
@@ -143,7 +141,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
         pointBorderWidth: 2,
-        data: lv,
+        data: livello,
     }],
   },
   options: {

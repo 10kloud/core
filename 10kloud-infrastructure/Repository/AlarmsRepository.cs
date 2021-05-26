@@ -55,8 +55,16 @@ namespace _10kloud_infrastructure.Repository
         public Alarm Get(int id)
         {
 
+            const string query = @"SELECT name, description, silos_id, severityalarm, threshold,  user_email
+FROM alarm
+WHERE id=@Id ";
             using var connection = new NpgsqlConnection(_connectionString);
-            return connection.Get<Alarm>(id);
+            return connection.QueryFirstOrDefault<Alarm>(query, new
+            {
+                Id = id
+            });
+
+            connection.Close();
 
         }
         /// <summary>

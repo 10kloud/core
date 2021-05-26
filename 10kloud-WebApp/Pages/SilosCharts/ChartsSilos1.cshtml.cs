@@ -28,11 +28,14 @@ namespace _10kloud_CRUD.Pages.SilosCharts
 
         public Silos Dati;
 
-        public ChartsSilos1Model(ILogger<IndexModel> logger, Silos dati)
+        public ChartsSilos1Model(ILogger<IndexModel> logger, IServiceAlarms alarmService)
         {
             _logger = logger;
-            Dati = dati;
+            GetApi = new ApiConnection();
+            _alarmService = alarmService;
+
         }
+
         public IEnumerable<Alarm> Allarmi { get; set; }
 
         public async void OnGet()
