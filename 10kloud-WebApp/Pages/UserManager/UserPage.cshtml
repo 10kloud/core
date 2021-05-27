@@ -40,7 +40,7 @@
                             <td>@item.PhoneNumber</td>
                         }
                         <td style="width: auto; text-align: center;">
-                            <a asp-page="/UserDelete">
+                            <a asp-page="/UserManager/UserDelete" asp-route-id="@item.Id">
                                 <button type="button" class="btn btn-danger ml-5">Elimina</button>
                             </a>
                         </td>

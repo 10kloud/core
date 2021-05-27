@@ -25,6 +25,14 @@ namespace _10kloud_WebApp.Pages.UserManager
             //_userService.Delete();
 
         }
-        
+        public IActionResult OnPost(string Id)
+        {
+
+            _userService.Delete(Id);
+            return RedirectToPage("/UserManager/UserPage");
+
+
+        }
+
     }
 }

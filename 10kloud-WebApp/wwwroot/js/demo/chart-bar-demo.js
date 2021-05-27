@@ -48,7 +48,7 @@ var myBarChart = new Chart(ctx, {
         labels: ["Silos 1", "Silos 2", "Silos 3", "Silos 4", "Silos 5", "Silos 6", "Silos 7"],
         datasets: [{
 
-            label: "umidita: " + umidita + " lvl ",
+            label: "umidita: " + umidita[1] + "temperatura:" temperatura[1] + " lvl ",
 
             backgroundColor: "#4e73df",
             hoverBackgroundColor: "#2e59d9",

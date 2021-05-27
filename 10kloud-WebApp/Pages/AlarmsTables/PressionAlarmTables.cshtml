@@ -47,7 +47,7 @@
                                 <a asp-page="/editAlarm/EditAlarm">
                                     <button type="button" class="btn btn-primary">Modifica</button>
                                 </a>
-                                <a asp-page="/AlarmsDelete/Delete?@item.Id">
+                                <a asp-page="/AlarmsDelete/Delete" asp-route-id="@item.Id">
                                     <button asp- type="button" class="btn btn-danger ml-5">Elimina </button>
                                 </a>
                             </td>

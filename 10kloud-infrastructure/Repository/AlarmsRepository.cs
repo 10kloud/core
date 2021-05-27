@@ -81,7 +81,7 @@ WHERE id=@Id ";
         public IEnumerable<Alarm> GetByAlarmingParameter(string alarming_parameter)
         {
 
-            const string query = @"SELECT name, description, silos_id, severityalarm, threshold,  user_email
+            const string query = @"SELECT id, name, description, silos_id, severityalarm, threshold,  user_email
 FROM alarm
 WHERE alarming_parameter=@Alarming_Parameter ORDER BY id";
             using var connection = new NpgsqlConnection(_connectionString);

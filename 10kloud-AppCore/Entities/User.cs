@@ -10,7 +10,7 @@ namespace _10kloud_AppCore.Entities
     /// User class contain the database's attributes
     /// the primary key id is ereditated from Entity base
     /// </summary>
-    public class User : Entity<int>
+    public class User : Entity<string>
     {
 
         public string UserName { get; set; }
