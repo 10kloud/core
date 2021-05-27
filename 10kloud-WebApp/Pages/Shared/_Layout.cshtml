@@ -89,9 +89,9 @@
 
             <!--User manager-->
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-page="/UserManager/UserPage" >
-                <i class="fas fa-users"></i>
-                <span>Gestione utenti</span>
+                <a class="nav-link collapsed" asp-page="/UserManager/UserPage">
+                    <i class="fas fa-users"></i>
+                    <span>Gestione utenti</span>
                 </a>
 
             </li>
@@ -185,22 +185,20 @@
                             <ul class="navbar-nav">
                                 @if (SignInManager.IsSignedIn(User))
                                 {
-                                    <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name! </a>
-                                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name! </a>
+                    </li>
                                     <li class="nav-item">
                                         <form class="form-inline" asp-area="Identity" asp-page="/Account/Login" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
                                             <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
                                         </form>
-                                    </li>
-                                }
-                                else
-                                {
+                                    </li> }
+                                                else
+                                                {
 
                                     <li class="nav-item">
                                         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-                                    </li>
-                                }
+                                    </li>}
                             </ul>
                         </li>
 
@@ -211,7 +209,7 @@
 
 
 
-                <div class="container">
+                <div class="container pl-1 ml-2 pr-1 mr-2">
                     <main role="main" class="pb-3">
                         @RenderBody()
                     </main>
@@ -248,6 +246,13 @@
 
     <!-- Page level custom scripts -->
     <script src="~/js/demo/chart-area-silos1.js"></script>
+    <script src="~/js/demo/chart-area-silos2.js"></script>
+    <script src="~/js/demo/chart-area-silos3.js"></script>
+    <script src="~/js/demo/chart-area-silos4.js"></script>
+    <script src="~/js/demo/chart-area-silos5.js"></script>
+    <script src="~/js/demo/chart-area-silos6.js"></script>
+    <script src="~/js/demo/chart-area-silos7.js"></script>
+
     <script src="~/js/demo/chart-pie-demo.js"></script>
     <script src="~/js/demo/chart-bar-demo.js"></script>
 

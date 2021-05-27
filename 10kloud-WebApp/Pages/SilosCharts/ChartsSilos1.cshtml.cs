@@ -26,7 +26,7 @@ namespace _10kloud_CRUD.Pages.SilosCharts
 
         private readonly ILogger<IndexModel> _logger;
 
-        public Silos Dati;
+        public IEnumerable<Silos> Dati;
 
         public ChartsSilos1Model(ILogger<IndexModel> logger, IServiceAlarms alarmService)
         {
@@ -38,10 +38,10 @@ namespace _10kloud_CRUD.Pages.SilosCharts
 
         public IEnumerable<Alarm> Allarmi { get; set; }
 
-        public  void OnGet()
+        public async  void OnGet()
         {
             Allarmi = _alarmService.GetBySilos(1);
-      //      Dati = await GetApi.GetSingleData(1);
+           Dati = await GetApi.GetData();
         }
     }
     public static class JavaScriptConvert

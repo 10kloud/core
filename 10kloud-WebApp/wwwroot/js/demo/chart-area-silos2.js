@@ -36,10 +36,7 @@ levels.forEach(el => {
     livello.push(el.level);
 });
 
-
-
-var ctx = document.getElementById("pressionS1");
-
+var ctx = document.getElementById("pressionS2");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
@@ -84,8 +81,8 @@ var myLineChart = new Chart(ctx, {
         }
       }],
       yAxes: [{
-        ticks: {
-          maxTicksLimit: 11,
+          ticks: {
+              maxTicksLimit: livello[].length(),
           padding: 10,
           max: 1.0,
           callback: function(value, index, values) {

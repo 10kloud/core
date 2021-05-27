@@ -28,7 +28,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart pression
-var ctx = document.getElementById("pressionS1");
+var ctx = document.getElementById("pressionS6");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {

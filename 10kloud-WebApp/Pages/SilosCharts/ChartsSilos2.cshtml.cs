@@ -39,9 +39,9 @@ namespace _10kloud_CRUD.Pages.SilosCharts
 
         public async void OnGet()
         {
-            Dati = await GetApi.GetLevel(2);
-
-            Allarmi = _alarmService.GetBySilos(2);
+            Dati = await GetApi.GetLevel();
+            var a = 0;
+       //     Allarmi = _alarmService.GetBySilos(2);
 
         }
     }

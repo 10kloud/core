@@ -22,10 +22,8 @@ namespace _10kloud_CRUD.Pages.AlarmsDelete
         }
         public Alarm Input { get; set; }
 
-        public void OnGet(int id)
-        {
-          _alarmService.Delete(id);
-        }
+        public void OnGet()
+        { }
         public IActionResult OnPost(int id)
         {
 

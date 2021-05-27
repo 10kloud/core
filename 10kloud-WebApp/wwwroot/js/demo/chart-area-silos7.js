@@ -28,11 +28,11 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart pression
-var ctx = document.getElementById("pressionS1");
+var ctx = document.getElementById("pressionS7");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s"],
+    labels: ["100s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s"],
     datasets: [{
       label: " bar",
       lineTension: 0.3,
