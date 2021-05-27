@@ -49,7 +49,7 @@ namespace _10kloud_CRUD.Pages.SilosCharts
             Pressione = (float)Dati.FirstOrDefault<Silos>().pressureInternal;
             return Pressione;
         }
-        public float Umidita()
+        public int Umidita()
         {
             float Umidita;
             Umidita = (float)Dati.FirstOrDefault<Silos>().humidityExternal;
@@ -58,7 +58,8 @@ namespace _10kloud_CRUD.Pages.SilosCharts
                 Umidita = 1;
             }
             Umidita = Umidita * 100;
-            return Umidita;
+            int Um = (int)Umidita;
+            return Um;
         }
         public float Temperatura()
         {
