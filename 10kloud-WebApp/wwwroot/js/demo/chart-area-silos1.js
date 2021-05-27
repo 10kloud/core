@@ -118,6 +118,7 @@ var myLineChart = new Chart(ctx, {
     }
   }
 });
+var livello = [];
 
 // Area Chart temperature
 var levels = window.misurazione;
