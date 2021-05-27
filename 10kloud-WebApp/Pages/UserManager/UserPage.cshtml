@@ -1,12 +1,11 @@
 ﻿@page
-@model _10kloud_CRUD.Pages.AlarmsTables.PressionAlarmTablesModel
+@model _10kloud_WebApp.Pages.UserManager.UserPageModel
 @{
     Layout = "_Layout";
+
 }
 
 
-
-<!-- DataTales Example -->
 <div class="card shadow mb-4">
     <h1>Allarmi di pressione</h1>
     <div class="card-header py-3">
@@ -17,35 +16,33 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Nome allarme</th>
-                        <th>Silos</th>
-                        <th>Descrizione</th>
+                        <th>Email</th>
+                        <th>Numero di telefono</th>
 
-                        <th>Soglia Di Allarme</th>
 
-                        <th>Gravità Allarme</th>
-                        <th>Email Utente</th>
+
 
                     </tr>
                 </thead>
-                @foreach (var item in Model.Allarmi)
+                @foreach (var item in Model.Utenti)
                 {
                     <tr>
-                        <td>@item.Name</td>
-
-                        <td>@item.Silos_Id</td>
-                        <td>@item.Description</td>
 
 
+                        <td>@item.UserName</td>
+                        @if (item.PhoneNumber == null)
+                        {
 
-                        <td>@item.Threshold bar</td>
 
-                        <td>@item.Severity_Alarm</td>
-                        <td>@item.User_Email</td>
+                            <td>Numero di telefono non registrato</td>
+                        }
+                        else
+                        {
+                            <td>@item.PhoneNumber</td>
+
+                        }
                         <td style="width: auto; text-align: center;">
-                            <a asp-page="/editAlarm/EditAlarm">
-                                <button type="button" class="btn btn-primary">Modifica</button>
-                            </a>
+
                             <a asp-page="/AlarmsDelete/Delete">
                                 <button type="button" class="btn btn-danger ml-5">Elimina</button>
                             </a>

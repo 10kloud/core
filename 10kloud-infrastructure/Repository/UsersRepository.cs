@@ -1,5 +1,6 @@
 ﻿using _10kloud_AppCore.Entities;
 using _10kloud_AppCore.Interfaces.Repository;
+using Dapper;
 using Dapper.Contrib.Extensions;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
@@ -59,8 +60,19 @@ namespace _10kloud_infrastructure.Repository
         /// <returns></returns>
         public IEnumerable<User> GetAll()
         {
+            char apici = '"';
+            string table = apici + "AspNetUsers" + apici;
+            string UN = apici + "UserName" + apici;
+            string PN = apici + "PhoneNumber" + apici;
+
+            string query = "SELECT" + UN + ", " + PN + " FROM " + table;
+
             using var connection = new NpgsqlConnection(_connectionString);
-            return connection.GetAll<User>();
+            return connection.Query<User>(query);
+
+
+            connection.Close();
+
         }
 
         /// <summary>

@@ -46,9 +46,5 @@ namespace _10kloud_AppCore.Entities
         public int AccessFailedCount { get; set; }
 
 
-        /// <summary>
-        /// User Permission
-        /// </summary>
-        public int Permission { get; set; }
     }
 }

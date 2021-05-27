@@ -87,6 +87,15 @@
                 </div>
             </li>
 
+            <!--User manager-->
+            <li class="nav-item">
+                <a class="nav-link collapsed" asp-page="/UserManager/UserPage" >
+                <i class="fas fa-users"></i>
+                <span>Gestione utenti</span>
+                </a>
+
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -105,7 +114,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    <h1>Livelli Silos</h1>
+                    <h1>SiouxSilos</h1>
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
@@ -180,14 +189,14 @@
                                         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name! </a>
                                     </li>
                                     <li class="nav-item">
-                                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Login" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
                                             <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
                                         </form>
                                     </li>
                                 }
                                 else
                                 {
-                                    
+
                                     <li class="nav-item">
                                         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
                                     </li>
@@ -209,12 +218,12 @@
                 </div>
 
             </div>
-        
-        <footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2021 - _10kloud_WebApp - <a asp-area="" asp-page="/Privacy">Privacy</a>
-            </div>
-        </footer>
+
+            <footer class="border-top footer text-muted">
+                <div class="container">
+                    &copy; 2021 - _10kloud_WebApp - <a asp-area="" asp-page="/Privacy">Privacy</a>
+                </div>
+            </footer>
         </div>
     </div>
 
