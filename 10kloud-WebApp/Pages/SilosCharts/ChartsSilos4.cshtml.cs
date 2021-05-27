@@ -34,18 +34,11 @@ namespace _10kloud_CRUD.Pages.SilosCharts
 
         public async Task OnGet()
         {
-            Dati = await GetApi.GetLevel(4);
-            Allarmi = _alarmService.GetBySilos(4);
+            Dati = await GetApi.GetLevel(3);
+            Allarmi = _alarmService.GetBySilos(3);
 
             var x = User.IsInRole("admin");
-           
-        }
-        public float pressione()
-        {
-            Silos rpova = Dati.FirstOrDefault<Silos>();
-            float Pressione = (float)rpova.pressureInternal;
 
-            return Pressione;
         }
     }
     

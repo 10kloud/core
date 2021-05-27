@@ -87,7 +87,7 @@ var myLineChart = new Chart(ctx, {
           padding: 10,
           max: 10.0,
           callback: function(value, index, values) {
-            return String(value) + ' bar';
+            return String(value) + ' m';
           }
         },
         gridLines: {

@@ -1,7 +1,7 @@
 ﻿@page
 @model _10kloud_CRUD.Pages.SilosCharts.ChartsSilos2Model
 @{
-    Layout = "_LayoutSilos1";
+    Layout = "_Layout";
 }
     <script>var misurazione=@JavaScriptConvert.SerializeObject(Model.Dati);</script>
 
@@ -17,8 +17,8 @@
                 <!-- Area Chart -->
                 <div class="card shadow w-100">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Pressione Interna</h6>
-                    </div>
+                        <h6 class="m-0 font-weight-bold text-primary">Livello/h6>
+</div>
                     <div class="card-body">
                         <div class="chart-area" style="height: 480px;">
                             <canvas id="pressionS2"></canvas>
