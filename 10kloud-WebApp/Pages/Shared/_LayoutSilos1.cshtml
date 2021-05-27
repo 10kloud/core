@@ -87,6 +87,15 @@
                 </div>
             </li>
 
+            <!--User manager-->
+            <li class="nav-item">
+                <a class="nav-link collapsed" asp-page="/UserManager/UserPage">
+                    <i class="fas fa-users"></i>
+                    <span>Gestione utenti</span>
+                </a>
+
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -105,7 +114,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    <h1>Livelli Silos</h1>
+                    <h1>SiouxSilos</h1>
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
@@ -119,81 +128,28 @@
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
 
-
-                            <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                 aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
                         </li>
+
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <ul class="navbar-nav">
                                 @if (SignInManager.IsSignedIn(User))
                                 {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name! </a>
+                    </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name! </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Login" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
                                             <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
                                         </form>
-                                    </li>
-                                }
-                                else
-                                {
-                                    <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
-                                    </li>
+                                    </li> }
+                                                else
+                                                {
+
                                     <li class="nav-item">
                                         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-                                    </li>
-                                }
+                                    </li>}
                             </ul>
                         </li>
 
@@ -202,7 +158,9 @@
 
 
 
-                <div class="container">
+
+
+                <div class="container pl-1 ml-2 pr-1 mr-2">
                     <main role="main" class="pb-3">
                         @RenderBody()
                     </main>
@@ -245,9 +203,8 @@
     <script src="~/js/demo/chart-area-silos5.js"></script>
     <script src="~/js/demo/chart-area-silos6.js"></script>
     <script src="~/js/demo/chart-area-silos7.js"></script>
+    <script>var misurazione=@JavaScriptConvert.SerializeObject(Model.Dati);</script>
 
-    <script src="~/js/demo/chart-pie-demo.js"></script>
-    <script src="~/js/demo/chart-bar-demo.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
