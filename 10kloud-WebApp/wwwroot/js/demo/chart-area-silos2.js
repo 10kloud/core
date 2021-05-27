@@ -30,183 +30,99 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 // Area Chart pression
 var levels = window.misurazione;
 var livello = [];
-
+var orari = [];
 
 levels.forEach(el => {
     livello.push(el.level);
+    orari.push(el.time)
 });
 
 var ctx = document.getElementById("pressionS2");
-//var myLineChart = new Chart(ctx, {
-//  type: 'line',
-//  data: {
-//    labels: ["10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s", "10s"],
-//    datasets: [{
-//      label: " bar",
-//      lineTension: 0.3,
-//      backgroundColor: "rgba(78, 115, 223, 0.05)",
-//      borderColor: "rgba(78, 115, 223, 1)",
-//      pointRadius: 3,
-//      pointBackgroundColor: "rgba(78, 115, 223, 1)",
-//      pointBorderColor: "rgba(78, 115, 223, 1)",
-//      pointHoverRadius: 3,
-//      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-//      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
-//      pointHitRadius: 10,
-//      pointBorderWidth: 2,
-//      data: livello,
-//    }],
-//  },
-//  options: {
-//    maintainAspectRatio: false,
-//    layout: {
-//      padding: {
-//        left: 10,
-//        right: 25,
-//        top: 25,
-//        bottom: 0
-//      }
-//    },
-//    scales: {
-//      xAxes: [{
-//        time: {
-//          unit: 'seconds'
-//        },
-//        gridLines: {
-//          display: false,
-//          drawBorder: false
-//        },
-//        ticks: {
-//          maxTicksLimit: 10
-//        }
-//      }],
-//      yAxes: [{
-//          ticks: {
-//              maxTicksLimit: 7,
-//          padding: 10,
-//          max: 1.0,
-//          callback: function(value, index, values) {
-//            return String(value) + ' bar';
-//          }
-//        },
-//        gridLines: {
-//          color: "rgb(0, 0, 0)",
-//          zeroLineColor: "rgb(0, 0, 0)",
-//          drawBorder: false,
-//          borderDash: [0],
-//          zeroLineBorderDash: [0]
-//        }
-//      }],
-//    },
-//    legend: {
-//      display: false
-//    },
-//    tooltips: {
-//      backgroundColor: "rgb(255,255,255)",
-//      bodyFontColor: "#858796",
-//      titleMarginBottom: 10,
-//      titleFontColor: '#6e707e',
-//      titleFontSize: 14,
-//      borderColor: '#dddfeb',
-//      borderWidth: 1,
-//      xPadding: 15,
-//      yPadding: 15,
-//      displayColors: false,
-//      intersect: false,
-//      mode: 'index',
-//      caretPadding: 10,
-//      callbacks: {
-//        label: function(tooltipItem, chart) {
-//          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-//          return number_format(tooltipItem.yLabel) + datasetLabel;
-//        }
-//      }
-//    }
-//  }
-//});
-
-
-var myBarChart = new Chart(ctx, {
-
-    type: 'bar',
-    data: {
-        labels: ["Silos 1", "Silos 2", "Silos 3", "Silos 4", "Silos 5", "Silos 6", "Silos 7"],
-        datasets: [{
-
-            label:  " lvl ",
-
-            backgroundColor: "#4e73df",
-            hoverBackgroundColor: "#2e59d9",
-            borderColor: "#4e73df",
-            data: livello,
-        }],
+var myLineChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: orari,
+    datasets: [{
+      label: " bar",
+      lineTension: 0.3,
+      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      borderColor: "rgba(78, 115, 223, 1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointBorderColor: "rgba(78, 115, 223, 1)",
+      pointHoverRadius: 3,
+      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data: livello,
+    }],
+  },
+  options: {
+    maintainAspectRatio: false,
+    layout: {
+      padding: {
+        left: 10,
+        right: 25,
+        top: 25,
+        bottom: 0
+      }
     },
-    options: {
-        maintainAspectRatio: false,
-        layout: {
-            padding: {
-                left: 10,
-                right: 25,
-                top: 25,
-                bottom: 0
-            }
+    scales: {
+      xAxes: [{
+        time: {
+          unit: 'seconds'
         },
-        scales: {
-            xAxes: [{
-                time: {
-                    unit: 'Silos'
-                },
-                gridLines: {
-                    display: false,
-                    drawBorder: false
-                },
-                ticks: {
-                    maxTicksLimit: 6
-                },
-                maxBarThickness: 25,
-            }],
-            yAxes: [{
-                ticks: {
-                    min: 0,
-                    max: 8,
-                    maxTicksLimit: 10,
-                    padding: 10,
-                    // Include a dollar sign in the ticks
-                    callback: function (value, index, values) {
-                        return 'Livello liquido ' + number_format(value);
-                    }
-                },
-                gridLines: {
-                    color: "rgb(0,0,0)",
-                    zeroLineColor: "rgb(0,0,0)",
-                    drawBorder: true,
-                    borderDash: [0],
-                    zeroLineBorderDash: [0]
-                }
-            }],
+        gridLines: {
+          display: false,
+          drawBorder: false
         },
-        legend: {
-            display: false
+        ticks: {
+          maxTicksLimit: 10
+        }
+      }],
+      yAxes: [{
+          ticks: {
+              maxTicksLimit: 7,
+          padding: 10,
+          max: 10.0,
+          callback: function(value, index, values) {
+            return String(value) + ' bar';
+          }
         },
-        tooltips: {
-            titleMarginBottom: 10,
-            titleFontColor: '#6e707e',
-            titleFontSize: 14,
-            backgroundColor: "rgb(255,255,255)",
-            bodyFontColor: "#858796",
-            borderColor: '#dddfeb',
-            borderWidth: 1,
-            xPadding: 15,
-            yPadding: 15,
-            displayColors: false,
-            caretPadding: 10,
-            callbacks: {
-                label: function (tooltipItem, chart) {
-                    var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-                    return datasetLabel + number_format(tooltipItem.yLabel);
-                }
-            }
-        },
+        gridLines: {
+          color: "rgb(0, 0, 0)",
+          zeroLineColor: "rgb(0, 0, 0)",
+          drawBorder: false,
+          borderDash: [0],
+          zeroLineBorderDash: [0]
+        }
+      }],
+    },
+    legend: {
+      display: false
+    },
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      titleMarginBottom: 10,
+      titleFontColor: '#6e707e',
+      titleFontSize: 14,
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      intersect: false,
+      mode: 'index',
+      caretPadding: 10,
+      callbacks: {
+        label: function(tooltipItem, chart) {
+          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+          return number_format(tooltipItem.yLabel) + datasetLabel;
+        }
+      }
     }
+  }
 });
 

@@ -44,6 +44,9 @@ namespace _10kloud_CRUD.Pages.SilosCharts
            Dati = await GetApi.GetData();
         }
     }
+    
+
+
     public static class JavaScriptConvert
     {
         public static 

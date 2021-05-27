@@ -143,13 +143,15 @@
                                         <form class="form-inline" asp-area="Identity" asp-page="/Account/Login" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
                                             <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
                                         </form>
-                                    </li> }
-                                                else
-                                                {
+                                    </li>
+ }
+                                else
+                                {
 
-                                    <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-                                    </li>}
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                    </li>
+}
                             </ul>
                         </li>
 
@@ -203,7 +205,7 @@
     <script src="~/js/demo/chart-area-silos5.js"></script>
     <script src="~/js/demo/chart-area-silos6.js"></script>
     <script src="~/js/demo/chart-area-silos7.js"></script>
-    <script>var misurazione=@JavaScriptConvert.SerializeObject(Model.Dati);</script>
+    <script src="~/js/demo/chart-bar-demo.js"></script>
 
 
     @await RenderSectionAsync("Scripts", required: false)

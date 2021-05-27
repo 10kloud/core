@@ -73,11 +73,11 @@ namespace _10kloud_infrastructure
             return response;
 
         }
-        public async Task<IEnumerable<Silos>> GetLevel()
+        public async Task<IEnumerable<Silos>> GetLevel(int SilosId)
         {
             string datainizconv = "%272021-05-19%2008:55:02.509000000%27";
 
-            string ApiClient = await GetApi("https://3jea5u3n72.execute-api.eu-west-1.amazonaws.com/silos/silo_1?start="+datainizconv+"&sampling=1800&limit=9000");
+            string ApiClient = await GetApi("https://3jea5u3n72.execute-api.eu-west-1.amazonaws.com/silos/silo_"+SilosId+"?start="+datainizconv+"&sampling=60&limit=9000");
 
             var response = JsonSerializer.Deserialize<Silos[]>(ApiClient);
        

@@ -2,27 +2,38 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using _10kloud_AppCore;
 using _10kloud_AppCore.Entities;
 using _10kloud_AppCore.Interfaces.Services;
+using _10kloud_infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
 
 namespace _10kloud_CRUD.Pages.SilosCharts
 {
     public class Index1Model : PageModel
     {
-        private readonly IServiceAlarms _alarmService;
+        public ApiConnection GetApi { get; set; }
 
-        public Index1Model(IServiceAlarms alarmService)
+        private readonly IServiceAlarms _ServiceAlarms;
+
+        private readonly ILogger<IndexModel> _logger;
+
+        public IEnumerable<Silos> Dati;
+
+        public Index1Model(ILogger<IndexModel> logger)
         {
-            _alarmService = alarmService;
+            _logger = logger;
+            GetApi = new ApiConnection();
+
         }
 
-        public IEnumerable<Alarm> Allarmi { get; set; }
-        public void OnGet()
+        public async Task OnGet()
         {
-            Allarmi = _alarmService.GetBySilos(4);
+            Dati = await GetApi.GetLevel(4);
 
+            var x = User.IsInRole("admin");
         }
     }
 }

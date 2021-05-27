@@ -35,7 +35,6 @@ var livello = [];
 levels.forEach(el => {
     livello.push(el.level);
 });
-
 var ctx = document.getElementById("pressionS3");
 var myLineChart = new Chart(ctx, {
     type: 'line',
@@ -84,7 +83,7 @@ var myLineChart = new Chart(ctx, {
                 ticks: {
                     maxTicksLimit: 7,
                     padding: 10,
-                    max: 1.0,
+                    max: 10.0,
                     callback: function (value, index, values) {
                         return String(value) + ' bar';
                     }
@@ -124,3 +123,4 @@ var myLineChart = new Chart(ctx, {
         }
     }
 });
+
