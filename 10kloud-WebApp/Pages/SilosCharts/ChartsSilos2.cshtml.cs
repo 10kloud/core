@@ -25,26 +25,21 @@ namespace _10kloud_CRUD.Pages.SilosCharts
 
         private readonly IServiceAlarms _alarmService;
 
-
-
         private readonly ILogger<IndexModel> _logger;
-        public Silos Dati;
 
+        public IEnumerable<Silos> Dati;
 
-
-
-        public ChartsSilos2Model(IServiceAlarms alarmService)
+        public ChartsSilos2Model(ILogger<IndexModel> logger, IEnumerable<Silos> dati)
         {
-            _alarmService = alarmService;
-            GetApi = new ApiConnection();
-
-
+            _logger = logger;
+            Dati = dati;
         }
+
         public IEnumerable<Alarm> Allarmi { get; set; }
 
         public async void OnGet()
         {
-            //Dati = await GetApi.GetSingleData(2);
+            Dati = await GetApi.GetLevel(2);
 
             Allarmi = _alarmService.GetBySilos(2);
 

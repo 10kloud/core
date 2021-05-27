@@ -31,10 +31,13 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 var levels = window.misurazione;
 var livello = [];
 
+
 levels.forEach(el => {
     livello.push(el.level);
-    
 });
+
+
+
 var ctx = document.getElementById("pressionS1");
 
 var myLineChart = new Chart(ctx, {

@@ -29,6 +29,7 @@ namespace _10kloud_WebApp.Pages
         private readonly ILogger<IndexModel> _logger;
 
         public IEnumerable<Silos> Dati;
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
