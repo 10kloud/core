@@ -6,12 +6,15 @@ using _10kloud_AppCore;
 using _10kloud_AppCore.Entities;
 using _10kloud_AppCore.Interfaces.Services;
 using _10kloud_infrastructure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
 namespace _10kloud_CRUD.Pages.SilosCharts
 {
+    [Authorize]
+
     public class Index4Model : PageModel
     {
         public ApiConnection GetApi { get; set; }
