@@ -16,24 +16,37 @@ namespace _10kloud_CRUD.Pages.SilosCharts
     {
         public ApiConnection GetApi { get; set; }
 
-        private readonly IServiceAlarms _ServiceAlarms;
+        private readonly IServiceAlarms _alarmService;
 
         private readonly ILogger<IndexModel> _logger;
 
         public IEnumerable<Silos> Dati;
+        public IEnumerable<Alarm> Allarmi { get; set; }
 
-        public Index1Model(ILogger<IndexModel> logger)
+
+        public Index1Model(ILogger<IndexModel> logger, IServiceAlarms alarmService)
         {
             _logger = logger;
             GetApi = new ApiConnection();
+            _alarmService = alarmService;
 
         }
 
         public async Task OnGet()
         {
             Dati = await GetApi.GetLevel(4);
+            Allarmi = _alarmService.GetBySilos(4);
 
             var x = User.IsInRole("admin");
+           
+        }
+        public float pressione()
+        {
+            Silos rpova = Dati.FirstOrDefault<Silos>();
+            float Pressione = (float)rpova.pressureInternal;
+
+            return Pressione;
         }
     }
+    
 }

@@ -27,6 +27,8 @@ namespace _10kloud_CRUD.Pages.SilosCharts
         private readonly ILogger<IndexModel> _logger;
 
         public IEnumerable<Silos> Dati;
+        public IEnumerable<Alarm> Allarmi { get; set; }
+
 
         public ChartsSilos1Model(ILogger<IndexModel> logger, IServiceAlarms alarmService)
         {
@@ -36,12 +38,13 @@ namespace _10kloud_CRUD.Pages.SilosCharts
 
         }
 
-        public IEnumerable<Alarm> Allarmi { get; set; }
-
-        public async  void OnGet()
+        public async Task OnGet()
         {
+            Dati = await GetApi.GetLevel(1);
             Allarmi = _alarmService.GetBySilos(1);
-           Dati = await GetApi.GetData();
+
+            var x = User.IsInRole("admin");
+
         }
     }
     

@@ -3,12 +3,8 @@
 @{
     Layout = "_LayoutSilos1";
 }
-<script>
-    var misurazione=@JavaScriptConvert.SerializeObject(Model.Dati);
+<script>var misurazione=@JavaScriptConvert.SerializeObject(Model.Dati);</script>
 
-</script>
-
-<!-- Begin Page Content -->
 <div class="container-fluid">
     <h1>Silos 1</h1>
     <h2>Cluster 1</h2>
@@ -25,7 +21,7 @@
                 </div>
                 <div class="card-body">
                     <div class="chart-area" style="height: 480px;">
-                        <canvas id="pressionS1"></canvas>
+                        <canvas id="pressionS2"></canvas>
                     </div>
                 </div>
             </div>
@@ -50,7 +46,7 @@
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">Temperatura esterna</h6>
                     </div>
-                    <h1 class="mt-5 text-primary" style="text-align: center; font-size: 3.5rem;">25°</h1>
+                    <h1 class="mt-5 text-primary" style="text-align: center; font-size: 3.5rem;"></h1>
                 </div>
 
 
@@ -100,8 +96,4 @@
             </div>
         </div>
     </div>
-
 </div>
-
-
-<!-- /.container-fluid -->
