@@ -10,7 +10,7 @@ namespace _10kloud_AppCore.Interfaces.Repository
     /// <summary>
     /// it inherits  from IRepositoryBase
     /// </summary>
-    public interface IRepositoryUsers:IRepositoryBase<User, int>
+    public interface IRepositoryUsers:IRepositoryBase<User, string>
     {
     }
 }

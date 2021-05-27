@@ -1,5 +1,6 @@
 ﻿using _10kloud_AppCore.Entities;
 using _10kloud_AppCore.Interfaces.Repository;
+using Dapper;
 using Dapper.Contrib.Extensions;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
@@ -34,11 +35,19 @@ namespace _10kloud_infrastructure.Repository
         /// call the database to delete a User throgh dapper contrib
         /// </summary>
         /// <param name="id"></param>
-        public void Delete(int id)
+        public void Delete(string Id)
         {
-            using var connection = new NpgsqlConnection(_connectionString);
+            char apici = '"';
+            string table = apici + "AspNetUsers" + apici;
+            string CapsId = apici + "Id" + apici;
 
-            connection.Delete<User>(new User { Id = id });
+
+
+            string query = @"DELETE FROM" + table + " WHERE " + CapsId + " = @Id";
+
+            using var connection = new NpgsqlConnection(_connectionString);
+            connection.Execute(query, new { Id = Id });
+
         }
 
         /// <summary>
@@ -53,14 +62,32 @@ namespace _10kloud_infrastructure.Repository
 
         }
 
+        public User Get(string id)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// call the database to get all User throgh dapper contrib
         /// </summary>
         /// <returns></returns>
         public IEnumerable<User> GetAll()
         {
+            char apici = '"';
+            string table = apici + "AspNetUsers" + apici;
+            string ID = apici + "Id" + apici;
+
+            string UN = apici + "UserName" + apici;
+            string PN = apici + "PhoneNumber" + apici;
+
+            string query = "SELECT" + ID + "," + UN + ", " + PN + " FROM " + table;
+
             using var connection = new NpgsqlConnection(_connectionString);
-            return connection.GetAll<User>();
+            return connection.Query<User>(query);
+
+
+            connection.Close();
+
         }
 
         /// <summary>

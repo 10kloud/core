@@ -1,0 +1,36 @@
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\10kloud-CRUD\10kloud-AppCore\bin\Debug\net5.0\10kloud-AppCore.deps.json
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\10kloud-CRUD\10kloud-AppCore\bin\Debug\net5.0\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\10kloud-CRUD\10kloud-AppCore\bin\Debug\net5.0\ref\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\10kloud-CRUD\10kloud-AppCore\bin\Debug\net5.0\10kloud-AppCore.pdb
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\10kloud-CRUD\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.csprojAssemblyReference.cache
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\10kloud-CRUD\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\10kloud-CRUD\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.AssemblyInfoInputs.cache
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\10kloud-CRUD\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.AssemblyInfo.cs
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\10kloud-CRUD\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.csproj.CoreCompileInputs.cache
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\10kloud-CRUD\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\10kloud-CRUD\10kloud-AppCore\obj\Debug\net5.0\ref\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\10kloud-CRUD\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.pdb
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.AssemblyInfoInputs.cache
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.AssemblyInfo.cs
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.csproj.CoreCompileInputs.cache
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-AppCore\obj\Debug\net5.0\ref\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.pdb
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-AppCore\bin\Debug\net5.0\10kloud-AppCore.deps.json
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-AppCore\bin\Debug\net5.0\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-AppCore\bin\Debug\net5.0\ref\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-AppCore\bin\Debug\net5.0\10kloud-AppCore.pdb
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.csprojAssemblyReference.cache
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-AppCore\bin\Debug\net5.0\10kloud-AppCore.deps.json
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-AppCore\bin\Debug\net5.0\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-AppCore\bin\Debug\net5.0\ref\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-AppCore\bin\Debug\net5.0\10kloud-AppCore.pdb
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.csprojAssemblyReference.cache
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.AssemblyInfoInputs.cache
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.AssemblyInfo.cs
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.csproj.CoreCompileInputs.cache
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-AppCore\obj\Debug\net5.0\ref\10kloud-AppCore.dll
+C:\Users\Bolzan Luca\ITS\Project Work\Backend\core - tryFE\10kloud-AppCore\obj\Debug\net5.0\10kloud-AppCore.pdb

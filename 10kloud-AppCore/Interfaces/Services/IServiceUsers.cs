@@ -15,7 +15,7 @@ namespace _10kloud_AppCore.Interfaces.Services
         IEnumerable<User> GetUsers();
 
         User Get(int id);
-        void Delete(int id);
+        void Delete(string id);
 
 
         void Insert(User item);

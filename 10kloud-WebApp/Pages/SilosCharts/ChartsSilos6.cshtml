@@ -1,0 +1,99 @@
+﻿@page
+@model _10kloud_CRUD.Pages.SilosCharts.Index3Model
+@{
+    Layout = "_Layout";
+}
+<script>var misurazione=@JavaScriptConvert.SerializeObject(Model.Dati);</script>
+
+<div class="container-fluid">
+    <h1>Silos 6</h1>
+    <h2>Cluster 2</h2>
+
+    <!-- Content Row -->
+    <div class="row" style="width:1500px; margin-bottom:10px;">
+
+        <div class="col-xl-12 col-lg-7 d-flex justify-content-start">
+
+            <!-- Area Chart -->
+            <div class="card shadow w-100">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Livello</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area" style="height: 480px;">
+                        <canvas id="pressionS2"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+                <!-- Area Chart -->
+                <div class="card shadow ml-4 mb-4" style="height: 20vh; width: 300px">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Pressione interna</h6>
+                    </div>
+                    <h1 class="mt-5 text-primary" style="text-align: center; font-size: 3.5rem;">@Model.Pressure() Bar</h1>
+                </div>
+
+                <div class="card shadow ml-4" style="height: 20vh; width: 300px; margin-top: 1px;">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Umidità esterna</h6>
+                    </div>
+                    <h1 class="mt-5 text-primary" style="text-align: center; font-size: 3.5rem;"> @Model.Umidita() %</h1>
+                </div>
+
+                <div class="card shadow ml-4" style="height: 20vh; width: 300px; margin-top: 1px;">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Temperatura esterna</h6>
+                    </div>
+                    <h1 class="mt-5 text-primary" style="text-align: center; font-size: 3.5rem;">@Model.Temperatura() Gradi</h1>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="card shadow mb-4" style="width:1800px; margin-top:30px;">
+            <div class="card-header py-3">
+                <a asp-page="/AlarmsCreate/CreateAlarmPression"><button type="button" class="btn btn-primary ml-2">Crea Allarme</button></a>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Nome allarme</th>
+                                <th>Parametro</th>
+                                <th>Descrizione</th>
+
+                                <th>Soglia Di Allarme</th>
+
+                                <th>Gravità Allarme</th>
+                                <th>Email Utente</th>
+
+                            </tr>
+                        </thead>
+                        @foreach (var item in Model.Allarmi)
+                        {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>@item.Alarming_Parameter</td>
+                                <td>@item.Description</td>
+                                <td>@item.Threshold bar</td>
+
+                                <td>@item.Severity_Alarm</td>
+                                <td>@item.User_Email</td>
+                                <td style="width: auto; text-align: center;">
+                                    <button type="button" class="btn btn-primary">Modifica</button>
+                                    <a asp-page="/AlarmsDelete/Delete"><button type="button" class="btn btn-danger ml-5">Elimina</button></a>
+                                </td>
+                            </tr>
+                        }
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

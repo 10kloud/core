@@ -34,7 +34,7 @@ namespace _10kloud_AppCore.Services
         /// delete a User by id
         /// </summary>
         /// <param name="id"></param>
-        public void Delete(int id)
+        public void Delete(string id)
         {
             _repositoryUsers.Delete(id);
         }
@@ -43,9 +43,14 @@ namespace _10kloud_AppCore.Services
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public User Get(int id)
+        public User Get(string id)
         {
             return _repositoryUsers.Get(id);
+        }
+
+        public User Get(int id)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
