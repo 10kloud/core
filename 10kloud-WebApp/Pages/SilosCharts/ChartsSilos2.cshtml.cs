@@ -29,10 +29,10 @@ namespace _10kloud_CRUD.Pages.SilosCharts
 
         public IEnumerable<Silos> Dati;
 
-        public ChartsSilos2Model(ILogger<IndexModel> logger, IEnumerable<Silos> dati)
+        public ChartsSilos2Model(ILogger<IndexModel> logger)
         {
             _logger = logger;
-            Dati = dati;
+            GetApi = new ApiConnection();
         }
 
         public IEnumerable<Alarm> Allarmi { get; set; }

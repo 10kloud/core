@@ -38,10 +38,10 @@ namespace _10kloud_CRUD.Pages.SilosCharts
 
         public IEnumerable<Alarm> Allarmi { get; set; }
 
-        public async void OnGet()
+        public  void OnGet()
         {
             Allarmi = _alarmService.GetBySilos(1);
-            Dati = await GetApi.GetSingleData(1);
+      //      Dati = await GetApi.GetSingleData(1);
         }
     }
     public static class JavaScriptConvert

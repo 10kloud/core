@@ -67,22 +67,7 @@
 
                             </tr>
                         </thead>
-                        @foreach (var item in Model.Allarmi)
-                        {
-                            <tr>
-                                <td>@item.Name</td>
-                                <td>@item.Alarming_Parameter</td>
-                                <td>@item.Description</td>
-                                <td>@item.Threshold bar</td>
-
-                                <td>@item.Severity_Alarm</td>
-                                <td>@item.User_Email</td>
-                                <td style="width: auto; text-align: center;">
-                                    <button type="button" class="btn btn-primary">Modifica</button>
-                                    <a asp-page="/AlarmsDelete/Delete"><button type="button" class="btn btn-danger ml-5">Elimina</button></a>
-                                </td>
-                            </tr>
-                        }
+                
 
 
                     </table>
