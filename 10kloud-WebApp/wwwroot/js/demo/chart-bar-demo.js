@@ -38,6 +38,8 @@ levels.forEach(el => {
     umidita.push(el.humidityExternal);
     temperatura.push(el.tempExternal);
 });
+var umAVG = (parseInt(umidita[5]) * 100).toFixed(2);
+var tempLog = (parseInt(temperatura[5])).toFixed(2);
 
 
 var ctx = document.getElementById("myBarChart");
@@ -48,7 +50,7 @@ var myBarChart = new Chart(ctx, {
         labels: ["Silos 1", "Silos 2", "Silos 3", "Silos 4", "Silos 5", "Silos 6", "Silos 7"],
         datasets: [{
 
-            label: "umidita: " + umidita[1] + "temperatura:" temperatura[1] + " lvl ",
+            label: "Umidita: " + umAVG +"Temperatura: "+ tempLog+ " lvl ",
 
             backgroundColor: "#4e73df",
             hoverBackgroundColor: "#2e59d9",

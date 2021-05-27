@@ -34,8 +34,10 @@ var orari = [];
 
 levels.forEach(el => {
     livello.push(el.level);
-    orari.push(el.time)
+    orari.push(el.time.split(" ")[1].split(":").slice(0, 2).join(":"))
 });
+livello=livello.reverse();
+orari=orari.reverse();
 
 var ctx = document.getElementById("pressionS2");
 var myLineChart = new Chart(ctx, {
