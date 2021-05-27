@@ -1,0 +1,68 @@
+﻿@page
+@model _10kloud_CRUD.Pages.AlarmsCreate.CreateAlarmUmidityModel
+@{
+    Layout = "_Layout";
+
+}
+
+<!-- alarm form -->
+<form class="ml-4 mr-4" method="post">
+    <div class="form-group">
+        <label asp-for="Input.Name" for="exampleFormControlInput1">Nome Allarme</label>
+        <input asp-for="Input.Name" class="form-control" id="exampleFormControlInput1" type="text">
+        <span asp-validation-for="Input.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Input.Description" for="exampleFormControlInput1">Descrizione Allarme</label>
+        <textarea asp-for="Input.Description"  class="form-control" id="exampleFormControlTextarea">Descrivi L'allarme...</textarea>
+        <span asp-validation-for="Input.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1" asp-for="Input.Silos_Id"></label>
+        <select asp-for="Input.Silos_Id" class="form-control" id="exampleFormControlSelect1">
+            <option value="1">Silos 1</option>
+            <option value="2">Silos 2</option>
+            <option value="3">Silos 3</option>
+            <option value="4">Silos 4</option>
+            <option value="5">Silos 5</option>
+            <option value="6">Silos 6</option>
+            <option value="7">Silos 7</option>
+        </select>
+        <span asp-validation-for="Input.Silos_Id" class="text-danger"></span>
+
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlSelect1" asp-for="Input.Threshold"></label>
+        <select asp-for="Input.Threshold" class="form-control" id="exampleFormControlSelect1">
+            <option value="0">0%</option>
+            <option value="10">10%</option>
+            <option value="20">20%</option>
+            <option value="30">30%</option>
+            <option value="40">40%</option>
+            <option value="50">50%</option>
+            <option value="60">60%</option>
+            <option value="70">70%</option>
+            <option value="80">80%</option>
+            <option value="90">90%</option>
+            <option value="100">100%</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlSelect1" asp-for="Input.Severity_Alarm"></label>
+        <select asp-for="Input.Severity_Alarm" class="form-control" id="exampleFormControlSelect1">
+            <option value="1">Allarme</option>
+            <option value="2">Errore</option>
+            <option value="3">Pericolo</option>
+        </select>
+        <span asp-validation-for="Input.Severity_Alarm" class="text-danger"></span>
+
+    </div>
+    <button type="submit" class="btn btn-primary ml-4" style="width: 80px;">Salva</button>
+    <button type="button" class="btn btn-danger ml-4" style="width: 80px;">Annulla</button>
+
+</form>
+
+
+<!-- End of Main Content -->

@@ -11,17 +11,24 @@ namespace _10kloud_AppCore.Entities
     /// Alarm class contain the database's attributes
     /// the primary key id is ereditated from Entity base
     /// </summary>
-    public class Alarm:Entity<int>
+    public class Alarm : Entity<int>
     {
         /// <summary>
         /// Silos Identifier
         /// </summary>
         [Display(Name = "Silos")]
         public int Silos_Id { get; set; }
+
+        public string Name { get; set; }
+
+
+        public string Description { get; set; }
+
+
         /// <summary>
         /// Threshold of the Alarm
         /// </summary>  
-        [Display(Name ="Soglia Di Allarme")]
+        [Display(Name = "Soglia Di Allarme")]
         public double Threshold { get; set; }
         /// <summary>
         /// sensor checked by the Alarm
@@ -33,13 +40,13 @@ namespace _10kloud_AppCore.Entities
         /// severity of the alarm( information, error, danger etc..)
         /// </summary>
         [Display(Name = "Gravità Allarme")]
-        public int Serverity_Alarm { get; set; }
+        public int Severity_Alarm { get; set; }
 
         /// <summary>
         /// User that created the Alarm
         /// </summary>
-        [Display(Name = "Id Utente")]
-        public int User_Id { get; set; }
+        [Display(Name = "Email Utente")]
+        public string User_Email { get; set; }
 
     }
 }

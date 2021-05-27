@@ -1,0 +1,52 @@
+﻿@page
+@model _10kloud_WebApp.Pages.UserManager.UserPageModel
+@{
+    Layout = "_Layout";
+
+}
+
+
+<div class="card shadow mb-4">
+    <h1>Gestione utenti</h1>
+    <div class="card-header py-3">
+        <a asp-page="/AlarmsCreate/CreateAlarmPression"><button type="button" class="btn btn-primary ml-2">Crea Allarme</button></a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Numero di telefono</th>
+
+                    </tr>
+                </thead>
+                @foreach (var item in Model.Utenti)
+                {
+                    <tr>
+
+                        <td>@item.UserName</td>
+                        @if (item.PhoneNumber == null)
+                        {
+                            <td>Numero di telefono non registrato</td>
+                        }
+                        else
+                        {
+                            <td>@item.PhoneNumber</td>
+                        }
+                        <td style="width: auto; text-align: center;">
+                            <a asp-page="/UserDelete">
+                                <button type="button" class="btn btn-danger ml-5">Elimina</button>
+                            </a>
+                        </td>
+                    </tr>
+                }
+
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
