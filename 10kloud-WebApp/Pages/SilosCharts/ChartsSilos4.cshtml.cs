@@ -18,6 +18,7 @@ namespace _10kloud_CRUD.Pages.SilosCharts
     public class Index1Model : PageModel
     {
         public ApiConnection GetApi { get; set; }
+        float Pressione;
 
         private readonly IServiceAlarms _alarmService;
 
@@ -32,7 +33,7 @@ namespace _10kloud_CRUD.Pages.SilosCharts
             _logger = logger;
             GetApi = new ApiConnection();
             _alarmService = alarmService;
-
+          
         }
 
         public async Task OnGet()
@@ -42,6 +43,29 @@ namespace _10kloud_CRUD.Pages.SilosCharts
 
             var x = User.IsInRole("admin");
 
+        }
+        public float Pressure()
+        {
+            float Pressione;
+            Pressione = (float)Dati.FirstOrDefault<Silos>().pressureInternal;
+            return Pressione;
+        }
+        public float Umidita()
+        {
+            float Umidita;
+            Umidita = (float)Dati.FirstOrDefault<Silos>().humidityExternal;
+            if (Umidita >= 1)
+            {
+                Umidita = 1;
+            }
+            Umidita = Umidita * 100;
+            return Umidita;
+        }
+        public float Temperatura()
+        {
+            float Temperatura;
+            Temperatura = (float)Dati.FirstOrDefault<Silos>().tempExternal;
+            return Temperatura;
         }
     }
     

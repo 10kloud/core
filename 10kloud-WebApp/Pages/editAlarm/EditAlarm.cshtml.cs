@@ -4,11 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using _10kloud_AppCore.Entities;
 using _10kloud_AppCore.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace _10kloud_CRUD.Pages.editAlarm
 {
+    [Authorize]
+
     public class EditAlarmModel : PageModel
     {
         private readonly IServiceAlarms _alarmService;

@@ -46,13 +46,36 @@ namespace _10kloud_CRUD.Pages.SilosCharts
             var x = User.IsInRole("admin");
 
         }
+        public float Pressure()
+        {
+            float Pressione;
+            Pressione = (float)Dati.FirstOrDefault<Silos>().pressureInternal;
+            return Pressione;
+        }
+        public float Umidita()
+        {
+            float Umidita;
+            Umidita = (float)Dati.FirstOrDefault<Silos>().humidityExternal;
+            if (Umidita >= 1)
+            {
+                Umidita = 1;
+            }
+            Umidita = Umidita * 100;
+            return Umidita;
+        }
+        public float Temperatura()
+        {
+            float Temperatura;
+            Temperatura = (float)Dati.FirstOrDefault<Silos>().tempExternal;
+            return Temperatura;
+        }
     }
-    
+
 
 
     public static class JavaScriptConvert
     {
-        public static 
+        public static
             HtmlString SerializeObject(object value)
         {
             using (var stringWriter = new StringWriter())

@@ -32,21 +32,21 @@
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">Pressione interna</h6>
                     </div>
-                    <h1 class="mt-5 text-primary" style="text-align: center; font-size: 3.5rem;">35%</h1>
+                    <h1 class="mt-5 text-primary" style="text-align: center; font-size: 3.5rem;">@Model.Pressure() Bar</h1>
                 </div>
 
                 <div class="card shadow ml-4" style="height: 20vh; width: 300px; margin-top: 1px;">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">Umidità esterna</h6>
                     </div>
-                    <h1 class="mt-5 text-primary" style="text-align: center; font-size: 3.5rem;">1 bar</h1>
+                    <h1 class="mt-5 text-primary" style="text-align: center; font-size: 3.5rem;"> @Model.Umidita() %</h1>
                 </div>
 
                 <div class="card shadow ml-4" style="height: 20vh; width: 300px; margin-top: 1px;">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">Temperatura esterna</h6>
                     </div>
-                    <h1 class="mt-5 text-primary" style="text-align: center; font-size: 3.5rem;"></h1>
+                    <h1 class="mt-5 text-primary" style="text-align: center; font-size: 3.5rem;">@Model.Temperatura() Gradi</h1>
                 </div>
 
 
